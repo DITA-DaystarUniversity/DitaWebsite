@@ -1,0 +1,30 @@
+#events{
+  margin-top: 100px;
+}
+
+.Calender
+{
+  width: 500px;
+  height: 500px;
+  background-color: blueviolet;
+}
+
+.days,
+.name_of_days
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.days p
+{
+  margin: 10.8px;
+}
+
+.name_of_days p{
+  margin: 9.2px;
+}
+
+.month_year{
+  text-align: center;
+  width: 200px;
+}

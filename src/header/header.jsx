@@ -13,7 +13,7 @@ function header() {
         </div>
         <div className="nav_links">
           <Link to="/about">About us</Link>
-          <Link to="/about">Events</Link>
+          <Link to="/events">Events</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/teams">Teams</Link>
         </div>

@@ -9,7 +9,7 @@ function header() {
     <>
       <div id="header">
         <div className="header_logo">
-          <img src={dita_logo} />
+          <Link to="/"><img src={dita_logo} /></Link>
         </div>
         <div className="nav_links">
           <Link to="/about">About us</Link>

@@ -68,3 +68,10 @@
     display: block;
   }
 }
+@media screen and (min-width: 1700px)
+{
+.menu_div{
+  display: none;
+  background-color: coral;
+}
+}

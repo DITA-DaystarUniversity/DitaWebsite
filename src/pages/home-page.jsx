@@ -14,6 +14,7 @@ import linkedin from "/src/assets/linkedin.png";
 import github from "/src/assets/github_logo.png";
 import instagram from "/src/assets/instagram_logo.png";
 import Main_layout from "/src/layout/Main_layout.jsx";
+import { Link } from "react-router-dom";
 
 function homePage() {
   const currentDate = new Date();
@@ -40,7 +41,7 @@ function homePage() {
                 laptop repairs for students & beyond.Trust us with your tech
                 challenges. At dita your digital journey begins here
               </p>
-              <p>Learn More</p>
+              <p className="learn_more1">Learn More</p>
             </div>
             <div>
               <img src={software_update}></img>
@@ -50,7 +51,7 @@ function homePage() {
                 installation services for optimised performance. Unlock the
                 latest features and protect your system.
               </p>
-              <p>Learn More</p>
+              <p className="learn_more2">Learn More</p>
             </div>
             <div>
               <img src={teaching}></img>
@@ -61,7 +62,7 @@ function homePage() {
                 the digital age with our student-focused teaching and training
                 services
               </p>
-              <p>Learn More</p>
+              <p className="learn_more3">Learn More</p>
             </div>
           </div>
         </div>

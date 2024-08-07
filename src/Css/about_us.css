@@ -21,7 +21,8 @@
 .about_us_text p
 {
   font-size: 32px;
-  width: 550px;
+  /* width: 550px; */
+  text-wrap: wrap;
 }
 .about_us_img
 {
@@ -36,6 +37,11 @@
 
 @media screen and (max-width: 1200px)
 {
+  .about_content
+  {
+    justify-content: start;
+    margin-left: 50px;
+  }
   .about_us_img{
     display: none;
   }
@@ -43,9 +49,17 @@
   {
     margin-top: 10px;
     background-image: url(src/assets/daystar_logo.jpeg);
-    background-position: center;
+    /* background-position: center;*/
     background-size: cover;
     /* color: white; */
     background: blur(10px);
+    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: rgb(148, 150, 150);
+
+  }
+  .about_us_text p
+  {
+    font-size: 25px;
+    width: 350px;
   }
 }

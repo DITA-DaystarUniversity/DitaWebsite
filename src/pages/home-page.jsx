@@ -15,6 +15,7 @@ import github from "/src/assets/github_logo.png";
 import instagram from "/src/assets/instagram_logo.png";
 import Main_layout from "/src/layout/Main_layout.jsx";
 import { Link } from "react-router-dom";
+import Homepage_slider from "/src/components/homepage_slider.jsx"
 
 function homePage() {
   const currentDate = new Date();
@@ -71,7 +72,9 @@ function homePage() {
           <h1>Meet Our Team</h1>
           <p>Meet Our Team. Get to know the talented individuals behind DITA</p>
 
-          <div className="OurTeams"></div>
+          <div className="OurTeams">
+            <Homepage_slider />
+          </div>
         </div>
 
         <div className="home_mission">

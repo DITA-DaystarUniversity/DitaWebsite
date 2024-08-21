@@ -1,0 +1,22 @@
+div
+{
+  display: flex;
+}
+img
+{
+  margin: 10px;
+  width: 300px;
+  height: auto;
+}
+button
+{
+  margin: 10px;
+  height: 50px;
+  margin-top: 250px;
+}
+.content
+{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}

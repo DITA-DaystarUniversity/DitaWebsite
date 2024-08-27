@@ -1,5 +1,5 @@
 import "/src/Css/events.css"
-import Main_layout from "/src/layout/Main_layout.jsx";
+// import Main_layout from "/src/layout/Main_layout.jsx";
 import Days from "/src/components/calender-days.jsx";
 import React from "react";
 
@@ -25,7 +25,7 @@ function events() {
   ]
 
   return (
-    <Main_layout>
+    // <Main_layout>
       <div id="events">
         <div className="Calender">
           <p className="month_year"> {months[currentMonth]}  {currentYear}</p>
@@ -41,7 +41,7 @@ function events() {
             <Days/>
         </div>
       </div>
-    </Main_layout>
+    // </Main_layout>
   );
 }
 

@@ -24,6 +24,8 @@
 .exc_1
 {
   background-color: aqua;
+  width: 250px;
+  padding-left: 50px;
 }
 .exc_name{
   font-size: 23px;

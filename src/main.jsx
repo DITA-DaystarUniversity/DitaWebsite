@@ -4,7 +4,9 @@ import HomePage from "./pages/home-page";
 import Aboutus from "./pages/About_us";
 import Events from "./pages/events";
 import Projects from "./pages/projects";
-import Teams from "./pages/teams";
+import Members from "./pages/members";
+import Achievements from "./pages/achievements";
+import TechnicalWriting from "./pages/technical_writing";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -26,9 +28,18 @@ const router = createBrowserRouter([
     element: <Projects />,
   },
   {
-    path: "/teams",
-    element: <Teams />,
+    path: "/members",
+    element: <Members />,
   },
+  {
+    path: "/achievements",
+    element: <Achievements />,
+  },
+  {
+    path: "/technicalWriting",
+    element: <TechnicalWriting />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,9 +1,10 @@
-import Main_layout from "/src/layout/Main_layout.jsx";
+// import Main_layout from "/src/layout/Main_layout.jsx";
+import Layout from "/src/header/other_pages.jsx"
 import "/src/Css/about_us.css"
 
 function About_us() {
   return (
-    <Main_layout>
+    <Layout>
       <div id="about_us">
       <div className="about_content">
         <div className="about_us_text">
@@ -20,7 +21,7 @@ function About_us() {
       </div>
       </div>
 
-    </Main_layout>
+     </Layout>
   );
 }
 

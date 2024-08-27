@@ -13,15 +13,15 @@ import huawei_logo from "/src/assets/huaweiLogo-3cef1ad7.png";
 import linkedin from "/src/assets/linkedin.png";
 import github from "/src/assets/github_logo.png";
 import instagram from "/src/assets/instagram_logo.png";
-import Main_layout from "/src/layout/Main_layout.jsx";
+import Homepage_layout from "/src/layout/homepage_layout.jsx";
 import { Link } from "react-router-dom";
-import Homepage_slider from "/src/components/homepage_slider.jsx"
+// import Homepage_slider from "/src/components/homepage_slider.jsx"
 
 function homePage() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   return (
-    <Main_layout>
+    <Homepage_layout>
       <div id="home_page">
         <div className="home_about">
           <div className="home_about_text">
@@ -73,7 +73,7 @@ function homePage() {
           <p>Meet Our Team. Get to know the talented individuals behind DITA</p>
 
           <div className="OurTeams">
-            <Homepage_slider />
+            {/* <Homepage_slider /> */}
           </div>
         </div>
 
@@ -178,7 +178,7 @@ function homePage() {
           <p className="copyright">© {currentYear} | All Rights Reserved</p>
         </div>
       </div>
-    </Main_layout>
+    </Homepage_layout>
   );
 }
 

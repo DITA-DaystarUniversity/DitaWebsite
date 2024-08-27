@@ -1,4 +1,6 @@
 import "/src/Css/homepage_slider.css";
+import  fs  from "/node_modules/fs";
+
 
 function homepage_slider() {
       let numberofimages = 0;
@@ -31,6 +33,14 @@ function homepage_slider() {
         `
       };
 
+
+      fs.readFile("input.txt", function (err, data) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log("Asynchronous read: " + data.toString());
+    });
+
     return (
       <div className="homepage_slider">
         <button className="prev" onClick={() => {
@@ -38,7 +48,7 @@ function homepage_slider() {
         }}>&lt;</button>
           <div className="content">
             <div className="exc_1">
-              <img src="/src/Images/Dita_ex/img0.jpg"></img>
+              <img src="/src/Images/Dita_ex/img0.jpg" className="exc_img"></img>
               <h2 className="exc_name">Prince Benedict</h2>
               <h3 className="exc_title">Dita President</h3>
               <p className="exc_description">Handsome in every aspect. The ladies man.</p>

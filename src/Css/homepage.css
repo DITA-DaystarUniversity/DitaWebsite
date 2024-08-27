@@ -267,7 +267,7 @@
     display: none;
   }
   .home_about {
-    background-image: url(/src/assets/club_image.jpeg);
+    /* background-image: url(/src/assets/club_image.jpeg); */
     color: white;
     background-position: center;
     filter: brightness(0.5);

@@ -1,5 +1,5 @@
 // import Main_layout from "/src/layout/Main_layout.jsx";
-import Layout from "/src/header/other_pages.jsx"
+import Layout from "/src/layout/pages_layout.jsx"
 import "/src/Css/about_us.css"
 
 function About_us() {

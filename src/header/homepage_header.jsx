@@ -3,6 +3,12 @@ import dita_logo from "/public/ditaLogo-3d409f18.png";
 import menu from "/src/assets/menu.png";
 import cancel from "/src/assets/cancel-50.png";
 import { Link } from "react-router-dom";
+import about_us_img from "/src/assets/about_icon.png";
+import events_img from "/src/assets/events_icon.png";
+import projects_img from "/src/assets/project_icon.png";
+import members_img from "/src/assets/people_icon.png";
+import achievements_img from "/src/assets/medal_icon.png";
+import technical_writing_img from "/src/assets/writing_icon.png";
 // import Links from
 
 function header() {
@@ -40,13 +46,13 @@ function header() {
           </button>
         </div>
       </div>
-      <div className="menu_div">
-        <Link to="/about">About us</Link>
-        <Link to="/about">Events</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/members">Members</Link>
-        <Link to="/Achievements">Achievements</Link>
-        <Link to="/technicalWriting">Technical Writing</Link>
+      <div className="menu_div" id="home_page_menu">
+      <Link to="/about">About us <img src={about_us_img} width={20}/></Link>
+        <Link to="/events">Events <img src={events_img} width={20}/></Link>
+        <Link to="/projects">Projects <img src={projects_img} width={20}/></Link>
+        <Link to="/members">Members <img src={members_img} width={20}/></Link>
+        <Link to="/Achievements">Achievements <img src={achievements_img} width={20}/></Link>
+        <Link to="/technicalWriting">Technical Writing <img src={technical_writing_img} width={20}/></Link>
       </div>
     </>
   );

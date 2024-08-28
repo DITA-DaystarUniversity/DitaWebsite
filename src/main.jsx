@@ -7,6 +7,9 @@ import Projects from "./pages/projects";
 import Members from "./pages/members";
 import Achievements from "./pages/achievements";
 import TechnicalWriting from "./pages/technical_writing";
+import Hackathon from "./pages/hackathon";
+import Project from "./pages/projects"; 
+import Awards from "./pages/awards";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -39,6 +42,18 @@ const router = createBrowserRouter([
     path: "/technicalWriting",
     element: <TechnicalWriting />,
   },
+  {
+    path: "/hackathon",
+    element: <Hackathon />,
+  },
+  {
+    path: "/project",
+    element: <Project />,
+  },
+  {
+    path: "/awards",
+    element: <Awards />,
+  },  
 
 ]);
 

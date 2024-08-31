@@ -8,10 +8,14 @@
 }
 
 .Events_display{
-  width: 55%;
+  width: 50%;
   height: 700px;
   overflow-y: auto;
   white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px
 
 }
 .Events_calender
@@ -23,17 +27,19 @@
 {
   text-align: start;
   font-size: 50px;
-  width: 100%;
+  width: 88%;
+  margin: 0px;
 }
-hr,
+
 .Event__page_title
 {
-  margin-left: 6%;
-  margin-right: 6%;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 hr
 {
   border-width: 5px;
+  width: 88%;
 }
 
 .event p

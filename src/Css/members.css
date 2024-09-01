@@ -1,0 +1,9 @@
+.members_content
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+#members
+{
+  padding-left: 5%;
+}

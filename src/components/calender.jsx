@@ -7,6 +7,11 @@ import * as booststap from 'bootstrap';
 
 function Calender(events) {
   const currentDate = new Date();
+  let displayWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  let calenderTools = "dayGridMonth,timeGridWeek,timeGridDay";
+  if(displayWidth < 768) {
+    calenderTools = "";
+  }
 
   return (
     <div id="calender">
@@ -16,7 +21,7 @@ function Calender(events) {
         headerToolbar={{
           left: "prev,next today",
           center: "title",
-          right: "dayGridMonth,timeGridWeek,timeGridDay",
+          right: calenderTools,
         }}
         events={events}
         editable={false}

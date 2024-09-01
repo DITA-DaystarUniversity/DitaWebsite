@@ -6,11 +6,12 @@
 .home_about {
   display: flex;
   justify-content: center;
+  background-color: aqua;
 }
 
 .home_about_text {
   width: 40%;
-  text-align: end;
+  text-align: center;
 }
 .home_about_text h5 {
   margin-top: 300px;
@@ -256,12 +257,48 @@
   #home_page {
     margin-top: 0px;
   }
+  .home_about_text h1
+  {
+    margin: 0px;
+    margin-left: -30px;
+    font-size: 50px;
+  }
+  .home_about_text h5
+  {
+    text-align: start;
+    margin-left: -30px;
+    margin-top: 80px;
+  }
+  .home_services h1
+  {
+    font-size: 30px;
+  }
+  .home_services h2
+  {
+    font-size: 20px;
+  }
+  #services div p
+  {
+    font-size: 14px;
+  }
+  .learn_more1{
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.44);
+  }
+  .learn_more2{
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.44);
+  }
+  .learn_more3{
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.44);
+  }
   #services div {
-    margin-bottom: 250px;
-    margin-right: 50px;
+    margin-bottom: 200px;
+    margin-right: 90px;
   }
   #services div:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 250px;
   }
   .home_about_img {
     display: none;
@@ -272,10 +309,115 @@
     background-position: center;
     filter: brightness(0.5);
     background-size: cover;
+    margin-bottom: 20px;
   }
   .home_about_text {
-    margin-bottom: 150px;
+    margin-bottom: 20px;
     margin-right: 50px;
+  }
+  .contact_details div h2 
+  {
+    font-size: 30px;
+  }
+  .contact_details div p
+  {
+    font-size: 13px;
+    width: 150px;
+  }
+  .contact_details div a
+  {
+    text-decoration: none;
+  }
+  .contact_details div
+  {
+    margin-bottom: 50px;
+    width: 150px;
+  }
+  .contact_details div:nth-child(2) p
+  {
+    margin-bottom: 28px;
+  }
+  .home_contact h1
+  {
+    font-size: 40px;
+  }
+  .contact_details div:last-child
+  {
+    margin-top: -30px;
+  }
+  .phone
+  {
+    margin-top: 20px;
+  }
+  .contact_details div:last-child
+  {
+    margin-bottom: 0px;
+  }
+  .home_partnerships h1
+  {
+    font-size: 30px;
+    text-align: center;
+  }
+  .home_partnerships div
+  {
+    text-align: center;
+    width: 300px;
+    margin: 0px;
+  }
+  .home_partnerships
+  {
+    padding: 20px;
+    margin: 0px;
+    margin-top: 50px;
+  }
+  .home_partnerships p
+  {
+    width: 300px;
+    font-size: 15px;
+  }
+  .home_partnerships img
+  {
+    width: 50px;
+    height: 50px;
+  }
+  .footer_links
+  {
+    width: 300px;
+    padding: 20px;
+  }
+  .home_footer
+  {
+    margin: 0px;
+    padding: 0px
+  }
+  .footer_links img
+  {
+    width: 150px;
+  }
+  .footer_links h2
+  {
+    text-align: center;
+    font-size: 25px;
+  }
+  .footer_links div a
+  {
+    font-size: 13px;
+    color: blue;
+    text-align: center;
+  }
+  .home_mission h1
+  {
+    font-size: 35px;
+    width: 300px;
+  }
+  .home_mission p
+  {
+    font-size: 14px;
+    width: 300px;
+  }
+  .home_mission  div
+  {
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 1600px) {

@@ -15,6 +15,7 @@ import github from "/src/assets/github_logo.png";
 import instagram from "/src/assets/instagram_logo.png";
 import Homepage_layout from "/src/layout/homepage_layout.jsx";
 import { Link } from "react-router-dom";
+import dita_logo from "/public/ditaLogo-3d409f18.png";
 // import Homepage_slider from "/src/components/homepage_slider.jsx"
 
 function homePage() {
@@ -68,14 +69,15 @@ function homePage() {
           </div>
         </div>
 
-        <div className="home_meet_team">
+        {/* <div className="home_meet_team">
           <h1>Meet Our Team</h1>
           <p>Meet Our Team. Get to know the talented individuals behind DITA</p>
 
           <div className="OurTeams">
-            {/* <Homepage_slider /> */}
+            <Homepage_slider />
           </div>
-        </div>
+          
+        </div> */}
 
         <div className="home_mission">
           <h1>Dita's Mission</h1>
@@ -108,13 +110,13 @@ function homePage() {
                 For any inquiries or collaborations, please reach out on our
                 email
               </p>
-              <p>Dita@daystar.ac.ke</p>
+              <a href="mailto:Dita@daystar.ac.ke">Dita@daystar.ac.ke</a>
             </div>
             <div>
               <img src={phone_icon}></img>
               <h2>Phone</h2>
               <p>Feel free to give us a call or send us a message</p>
-              <p>+254 712-345-6789</p>
+              <a href="tel:+254 712-345-6789" className="phone">+254 712-345-6789</a>
             </div>
             <div>
               <img src={location_icon}></img>
@@ -148,24 +150,24 @@ function homePage() {
         <div className="home_footer">
           <div className="footer_links">
             <div>
-              <h1>Dita</h1>
+            <Link to="/"><img src={dita_logo}  className="dita_logo" /></Link>
             </div>
 
             <div>
               <h2>Related Links</h2>
               <p>
-                <a href="">E-Learning</a>
+                <a href="https://elearning.daystar.ac.ke/">E-Learning</a>
               </p>
 
-              <a href="">Student Portal</a>
+              <a href="https://student.daystar.ac.ke/">Student Portal</a>
             </div>
 
             <div>
               <h2>Contact Us</h2>
               <p>
-                <a href="">dita@daystar.com</a>
+              Gmail: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
               </p>
-              <a href="">Daystar University, ATHI RIVER , KENYA</a>
+             Location:<a href="">Daystar University, ATHI RIVER , KENYA</a>
             </div>
           </div>
 

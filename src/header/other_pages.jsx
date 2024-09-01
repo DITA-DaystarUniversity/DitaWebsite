@@ -31,9 +31,9 @@ function other_pages()
               }
             }}
           >
-            <img src={menu}  className="menu_img"/>
+            <img src={menu} className="menu_img"/>
           </button>
-          <Link to="/"><img src={dita_logo} width={200}/></Link>
+          <Link to="/"><img src={dita_logo} width={100} className="dita_logo" /></Link>
     </div>
 
     <div className="menu_div" id="menu">

@@ -1,0 +1,19 @@
+.technical_writing_content
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.technical_writing_content button
+{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  height: 50px;
+  cursor: pointer;
+}

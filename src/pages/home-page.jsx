@@ -32,6 +32,15 @@ function homePage() {
           <div className="home_about_img"></div>
         </div>
 
+        <div className="home_about_phone_view">
+          <div>
+            <h1>Elevate. Innovate.</h1>
+            <h5>Unlocking Potential Through Technology</h5>
+          </div>
+         
+          {/* <img src="/src/assets/club_image.jpeg" className="phone_img"/> */}
+        </div>
+
         <div className="home_services">
           <h1>Discover Our Wide Range Of Services</h1>
           <div id="services">
@@ -172,9 +181,9 @@ function homePage() {
           </div>
 
           <div className="links">
-            <img src={linkedin}></img>
-            <img src={github}></img>
-            <img src={instagram}></img>
+            <a href="https://www.linkedin.com/company/dita-daystar-university"><img src={linkedin}/></a>
+            <a href="https://github.com/dita-daystaruni"><img src={github}/></a>
+            <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]"><img src={instagram}/></a>
           </div>
 
           <p className="copyright">© {currentYear} | All Rights Reserved</p>

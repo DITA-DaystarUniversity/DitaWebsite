@@ -2,14 +2,16 @@
   background-color: rgba(2, 19, 62, 1);
   color: white;
   /* margin-left: 5%; */
-  width: 98%;
+  width: 99%;
+  margin-right: 1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 0px;
+  height: 100px;
+  z-index: 10;
 }
-
 /* .nav_links{
   display: none;
 } */
@@ -21,7 +23,7 @@
   text-decoration: none;
 }
 .header_logo img {
-  width: 150px;
+  width: 100px;
 }
 
 .header_menu {
@@ -79,6 +81,7 @@
 @media screen and (max-width: 1200px) {
   #header {
     position: relative;
+    display: none;
     /* bottom: 10px; */
   }
   .nav_links {

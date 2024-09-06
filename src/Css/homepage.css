@@ -1,17 +1,45 @@
 #home_page {
   padding-left: 1%;
   padding-right: 1%;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .home_about {
   display: flex;
   justify-content: center;
-  background-color: aqua;
+}
+.phone_img
+{
+  display: none;
 }
 
 .home_about_text {
   width: 40%;
   text-align: center;
+}
+.home_about_phone_view
+{
+  display: none;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/src/assets/club_image.jpeg);
+  /* background-image: url(/src/assets/club_image.jpeg); */
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  height: 500px;
+  
+}
+.home_about_phone_view h1
+{
+  margin: 0px;
+  margin-top: 150px;
+  color: white;
+  font-size: 55px;  
+}
+.home_about_phone_view h5
+{
+  color: white;
+  margin: 0px;
 }
 .home_about_text h5 {
   margin-top: 300px;
@@ -257,21 +285,44 @@
   #home_page {
     margin-top: 0px;
   }
+  .home_about_text
+  {
+    display: block;
+  }
+  .home_about
+  {
+    display: none;
+  }
   .home_about_text h1
   {
     margin: 0px;
-    margin-left: -30px;
+    margin-left: 30px;
     font-size: 50px;
+    font-family: inter;
+    font-weight: 700;
+  }
+  .home_about_phone_view
+  {
+    display: flex;
+    margin-top: 20px;
   }
   .home_about_text h5
   {
     text-align: start;
-    margin-left: -30px;
+    margin-left: 30px;
+    margin-right: 0px;
     margin-top: 80px;
+    font-size: 20px;
+    font-family: inter;
+    font-weight: 600;
+  }
+  .home_services
+  {
+    margin-top: 50px;
   }
   .home_services h1
   {
-    font-size: 30px;
+    font-size: 23px;
   }
   .home_services h2
   {
@@ -302,6 +353,14 @@
   }
   .home_about_img {
     display: none;
+  }
+  .phone_img
+  {
+    display: block;
+    width: 180px;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
   .home_about {
     /* background-image: url(/src/assets/club_image.jpeg); */
@@ -363,6 +422,8 @@
     text-align: center;
     width: 300px;
     margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .home_partnerships
   {
@@ -384,11 +445,14 @@
   {
     width: 300px;
     padding: 20px;
+    text-decoration: none;
   }
   .home_footer
   {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .footer_links img
   {
@@ -415,9 +479,21 @@
     font-size: 14px;
     width: 300px;
   }
+  .home_mission
+  {
+    padding: 50px;
+  }
   .home_mission  div
   {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+  }
+  .copyright
+  {
+    font-size: 12px;
+  }
+  .links img
+  {
+    width: 20px;
   }
 }
 @media screen and (max-width: 1600px) {

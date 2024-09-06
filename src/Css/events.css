@@ -13,7 +13,7 @@
   overflow-y: auto;
   white-space: nowrap;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   flex-wrap: wrap;
   margin-top: 20px
 
@@ -69,10 +69,11 @@ hr
   .Events_display
   {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .Event__page_title
   {
     margin: 0px;
+    font-size: 33px;
   }
 }

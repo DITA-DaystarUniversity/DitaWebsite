@@ -1,6 +1,6 @@
 #about_us
 {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .about_content
 {
@@ -16,13 +16,13 @@
 }
 .about_us_text h1
 {
-  font-size: 75px;
+  font-size: 70px;
+  margin: 0px;
 }
 .about_us_text p
 {
-  font-size: 32px;
+  font-size: 25px;
   /* width: 550px; */
-  text-wrap: wrap;
 }
 .about_us_img
 {
@@ -34,6 +34,11 @@
   background-size: cover;
   border-radius: 50px;
 }
+#about_content_phone_view
+{
+  display: none;
+}
+
 
 @media screen and (max-width: 1200px)
 {
@@ -41,6 +46,7 @@
   {
     justify-content: start;
     margin-left: 50px;
+    display: none;
   }
   .about_us_img{
     display: none;
@@ -48,18 +54,41 @@
   #about_us
   {
     margin-top: 10px;
-    background-image: url(src/assets/daystar_logo.jpeg);
     /* background-position: center;*/
     background-size: cover;
     /* color: white; */
     background: blur(10px);
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    color: rgb(148, 150, 150);
-
+    /* border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
   }
   .about_us_text p
   {
-    font-size: 25px;
+    font-size: 18px;
     width: 350px;
+  }
+  .about_content_phone_view img
+  {
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about_content_phone_view 
+  {
+    background-color: white;
+  }
+  #about_content_phone_view
+  {
+    display: block;
+  }
+  #about_us h1
+  {
+    background-color: white;
+  }
+  #about_content_phone_view h1
+  {
+    margin: 0px;
+  }
+  #about_content_phone_view hr
+  {
+    margin-bottom: 10px;
   }
 }

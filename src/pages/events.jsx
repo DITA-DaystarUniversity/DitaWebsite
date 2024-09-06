@@ -56,15 +56,34 @@ function events() {
 
   // display_Events();
  function display_Events() {
+  const style = {
+    margin_top: "20px",
+    border_radius: "50px",
+    width: "300px",
+    padding: "20px",
+    margin: "20px",
+    margin_left: "10px",
+    font_size: "20px"
+  }
+  const displayWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (displayWidth < 768) {
+    style.margin_top = "15px";
+    style.width = "260px";
+    style.padding = "10px";
+    style.margin = "10px";
+    style.margin_left = "50px";
+    style.font_size = "19px";
+  }
     displayEvents.current.innerHTML = "";
     for (let i = 0; i <= ditaEvents.length ; i++) {
       const day = new Date(ditaEvents[i].start).getDay();
       const eventDays = new Date(ditaEvents[i].end).getDay() - new Date(ditaEvents[i].start).getDay();
       const display = eventDays > 1 ? true : false;
       displayEvents.current.innerHTML += `
-             <div className="event" style="text-align:start; margin-top: 20px; min-width: 300px; max-width: 300px; border: 1px solid rgba(217, 217, 217, 1);; border-radius: 50px; box-shadow: 5px 5px 5px black; padding: 20px; background: rgba(217, 217, 217, 1);">
-              <h2 style="font-family: 'Helvetica', sans-serif; margin: 0px; text-align: center"><strong>Event Name</strong>: ${ditaEvents[i].title}</h2>
-              <hr style="width: 60%; margin-left: 20%; color: black; margin: 0px">
+             <div className="event" style="text-align:start; margin-top: ${style.margin_top}; min-width: ${style.width}; max-width: ${style.width}; border: 1px solid rgba(217, 217, 217, 1);; border-radius: ${style.border_radius}; box-shadow: 5px 5px 5px black; padding: ${style.padding}; background: rgba(217, 217, 217, 1);">
+              <h2 style="font-family: 'Helvetica', sans-serif; margin: 0px; text-align: center; font-size: ${style.font_size};"><strong>Event Name</strong>: ${ditaEvents[i].title}</h2>
+              <hr style="width: 100%; margin-left: ${style.margin_left}; color: black; margin: 0px">
               <p style="font-family: 'Helvetica', sans-serif;"><strong>Day</strong>: ${daysofweek[day]}</p>
               <p style="font-family: 'Helvetica', sans-serif;"><strong>Date</strong>: ${ditaEvents[i].start}</p>
               <p style="font-family: 'Helvetica', sans-serif;"><strong>Venue</strong>: ${ditaEvents[i].venue}</p>

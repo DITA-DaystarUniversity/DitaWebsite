@@ -7,7 +7,7 @@
 #Achievements h1
 {
   font-family: Inter;
-  font-size: 65px;
+  font-size: 50px;
   font-weight: 600;
   line-height: 89.56px;
   text-align: left;
@@ -73,20 +73,30 @@
 {
   .Achievements_hackathon_img
   {
-    height: 300px;
+    height: 200px;
   }
   .Achievements_content div
   {
-    margin-top: 50px;
-    width: 300px;
+    margin-top: 20px;
+    width: 200px;
+  }
+  .Achievements_content div h2
+  {
+    font-size: 30px;
+    margin: 0px;
   }
   .Achievements_content div img
   {
-    width: 300px;
+    width: 200px;
   }
   .Achievements_content div img:nth-child(2)
   {
     height: 200px;
+  }
+  .Achievements_hr
+  {
+    margin: 0px;
+    margin-left: 5%;
   }
 }
 

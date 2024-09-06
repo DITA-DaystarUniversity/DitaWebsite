@@ -70,11 +70,28 @@ function Projects() {
 
   function showProjects()
   {
+    const style = {
+      p_font : "20px",
+      padding: "20px",
+      margin_top: "70px",
+      border_radius: "50px",
+      margin_left: "10px"
+    }
+
+    const displayWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if(displayWidth < 768) {
+      style.p_font = "10px";
+      style.padding = "10px";
+      style.margin_top = "20px";
+      style.border_radius = "50px";
+      style.margin_left = "10px";
+    }
+
     console.log("hello");
     displayProjects.current.innerHTML = "";
     for (let i = 0; i <= Dita_Projects.length ; i++) {
       displayProjects.current.innerHTML += `
-             <div className="project" style="text-align:left; font-size: 20px; padding: 20px; margin-top: 70px; border: 1px solid black; border-radius: 50px; box-shadow: 5px 5px 5px black;">
+             <div className="project" style="text-align:left; font-size: ${style.p_font}; padding: ${style.padding}; margin-top: ${style.margin_top}; border: 1px solid black; border-radius: ${style.border_radius}; box-shadow: 5px 5px 5px black;">
               <h2 >
               <strong style="font-family: 'Helvetica', sans-serif;">Project Name</strong>: ${Dita_Projects[i].project_name}
               </h2>
@@ -91,7 +108,7 @@ function Projects() {
               <strong>Languages used</strong>: ${Dita_Projects[i].languages_used}</p>
               <p style="font-family: 'Helvetica', sans-serif;">
               <strong>Team Members</strong>: ${Dita_Projects[i].team_members}</p>
-              <a href="${Dita_Projects[i].project_link}" style="font-family: 'Helvetica', sans-serif;">Click here to see the project</a>
+              <a href="${Dita_Projects[i].project_link}" style="font-family: 'Helvetica', sans-serif; margin-left: 50px; text-decoration: none" >Click here to see the project</a>
             </div>
       `;
     }
@@ -110,5 +127,6 @@ function Projects() {
     </Layout>
   );
 }
+
 
 export default Projects;

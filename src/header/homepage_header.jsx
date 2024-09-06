@@ -16,7 +16,7 @@ function header() {
     <>
       <div id="header">
         <div className="header_logo">
-          <Link to="/"><img src={dita_logo} /></Link>
+          <Link to="/"><img src={dita_logo}  /></Link>
         </div>
         <div className="nav_links">
           <Link to="/about">About us</Link>
@@ -46,8 +46,31 @@ function header() {
           </button>
         </div>
       </div>
-      <div className="menu_div" id="home_page_menu">
-      <Link to="/about">About us <img src={about_us_img} width={20}/></Link>
+
+      <div id="header_other">
+    <button className="menu_btn"
+            onClick={() => {
+              // document.querySelector(".menu_div").style.display = "flex"
+
+              if (
+                document.querySelector(".menu_div").style.display === "none"
+              ) {
+                document.querySelector(".menu_div").style.display = "flex";
+                document.querySelector(".menu_img").src = cancel;
+              } else {
+                document.querySelector(".menu_div").style.display = "none";
+                document.querySelector(".menu_img").src = menu;
+              }
+            }}
+          >
+            <img src={menu} className="menu_img"/>
+          </button>
+          <Link to="/"><img src={dita_logo} width={100} className="dita_logo" /></Link>
+    </div>
+
+
+      <div className="menu_div " id="menu">
+        <Link to="/about">About us <img src={about_us_img} width={20}/></Link>
         <Link to="/events">Events <img src={events_img} width={20}/></Link>
         <Link to="/projects">Projects <img src={projects_img} width={20}/></Link>
         <Link to="/members">Members <img src={members_img} width={20}/></Link>

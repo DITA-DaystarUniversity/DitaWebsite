@@ -7,3 +7,57 @@
 {
   padding-left: 5%;
 }
+
+.members_display
+{
+  display: none;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.members_display button
+{
+  margin: 10px;
+}
+.members_display button:first-child
+{
+  margin-left: 2%;
+  margin-right: 74%;
+}
+
+
+.member
+{
+  font-family: 'Helvetica';
+}
+.member h2,
+.member p,
+.member div
+{
+  text-align: center;
+}
+.member img
+{
+  width: 300px;
+}
+
+@media screen and (max-width: 500px)
+{
+  .members_display
+  {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -14px;
+  }
+  .members_content
+  {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px)
+{
+  .members_content
+  {
+    margin-left: 15%;
+  }
+}

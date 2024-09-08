@@ -2,7 +2,7 @@ import Layout from "/src/layout/pages_layout.jsx";
 import React, { useRef, useState } from "react";
 import "/src/Css/members.css";
 function members() {
-  const [number, setNumber] = useState(0);  
+  const [number, setNumber] = useState(0);
   const ditaMembers = [
     {
       name: "Member 1",
@@ -92,29 +92,23 @@ function members() {
     }
   }
 
-  function next()
-  {
+  function next() {
     // const member = getElementByClassName("member");
     // member.style.backgroundColor = randomColor();
     randomColor();
-    if(number < (ditaMembers.length - 1))
-    {
+    if (number < ditaMembers.length - 1) {
       setNumber(number + 1);
       console.log(number);
-    }else if(number == ditaMembers.length)
-    {
+    } else if (number == ditaMembers.length) {
       setNumber(0);
       console.log(number);
     }
   }
 
-  function prev()
-  {
-    if(number > 0)
-    {
+  function prev() {
+    if (number > 0) {
       setNumber(number - 1);
-    }else if(number < 0)
-    {
+    } else if (number < 0) {
       setNumber(ditaMembers.length);
     }
   }
@@ -131,12 +125,20 @@ function members() {
         <div className="members_display">
           <button onClick={() => prev()}>&lt;</button>
           <button onClick={() => next()}>&gt;</button>
-              <div className="member" style={{backgroundColor: randomColor(),  alignItems: "center", borderRadius: "10%", padding: "20px"}}>
-                <img src={ditaMembers[number].img} />
-                <h2>{ditaMembers[number].name}</h2>
-                <p>{ditaMembers[number].role}</p>
-                <div>{ditaMembers[number].description}</div>
-              </div>
+          <div
+            className="member"
+            style={{
+              backgroundColor: randomColor(),
+              alignItems: "center",
+              borderRadius: "10%",
+              padding: "20px",
+            }}
+          >
+            <img src={ditaMembers[number].img} />
+            <h2>{ditaMembers[number].name}</h2>
+            <p>{ditaMembers[number].role}</p>
+            <div>{ditaMembers[number].description}</div>
+          </div>
         </div>
       </div>
     </Layout>

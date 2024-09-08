@@ -1,45 +1,50 @@
-import Layout from "/src/layout/pages_layout.jsx"
-import React, { useRef } from "react"
-import "/src/Css/technical_writing.css"
+import Layout from "/src/layout/pages_layout.jsx";
+import React, { useRef } from "react";
+import "/src/Css/technical_writing.css";
 function technicalWriting() {
   const displayWriting = useRef(null);
 
   const ditaWriting = [
     {
-      name:"Writer Name",
-      img:"https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      topic:"Topic title",
-      description:"lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      name: "Writer Name",
+      img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
+      topic: "Topic title",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
-      name:"Writer Name",
-      img:"https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      topic:"Topic title",
-      description:"lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      name: "Writer Name",
+      img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
+      topic: "Topic title",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
-      name:"Writer Name",
-      img:"https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      topic:"Topic title",
-      description:"lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      name: "Writer Name",
+      img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
+      topic: "Topic title",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
-      name:"Writer Name",
-      img:"https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      topic:"Topic title",
-      description:"lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      name: "Writer Name",
+      img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
+      topic: "Topic title",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     },
     {
-      name:"Writer Name",
-      img:"https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      topic:"Topic title",
-      description:"lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-    }
-  ]
+      name: "Writer Name",
+      img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
+      topic: "Topic title",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    },
+  ];
 
   function display_Writing() {
     displayWriting.current.innerHTML = "";
-    for (let i = 0; i <= ditaWriting.length ; i++) {
+    for (let i = 0; i <= ditaWriting.length; i++) {
       displayWriting.current.innerHTML += `
       <div  style="  width: 40%;background-color: aqua;padding: 50px; margin: 20px; min-width: 210px;">
         <img style="border-radius: 50%;width: 150px;height: 150px;" src=${ditaWriting[i].img}/>
@@ -51,18 +56,18 @@ function technicalWriting() {
         > <a href="https://google.com">Continue reading</a></button>
         </div>
       </div>
-      `
+      `;
     }
   }
   return (
     <Layout>
-    <div id="technical_writing">
-      <h1 className="Event__page_title">Technical Writing</h1>
-      <hr/>
+      <div id="technical_writing">
+        <h1 className="Event__page_title">Technical Writing</h1>
+        <hr />
         <div className="technical_writing_content" ref={displayWriting}>
           <button onClick={() => display_Writing()}>Display All</button>
         </div>
-    </div>
+      </div>
     </Layout>
   );
 }

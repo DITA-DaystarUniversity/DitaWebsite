@@ -1,11 +1,8 @@
-#Achievements
-{
+#Achievements {
   margin-left: 5%;
   margin-right: 5%;
-
 }
-#Achievements h1
-{
+#Achievements h1 {
   font-family: Inter;
   font-size: 50px;
   font-weight: 600;
@@ -13,91 +10,74 @@
   text-align: left;
   margin: 0px;
 }
-.Achievements_hr
-{
+.Achievements_hr {
   border: 2px solid rgba(29, 49, 94, 0.66);
   margin-top: 30px;
 }
-.Achievements_content
-{
+.Achievements_content {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-.Achievements_content img
-{
+.Achievements_content img {
   border-radius: 70px;
 }
-.Achievements_content h2
-{
-  text-align: center;  font-size: 40px;
+.Achievements_content h2 {
+  text-align: center;
+  font-size: 40px;
   font-family: Inter;
   font-size: 48px;
   font-weight: 600;
   line-height: 58.09px;
   color: rgba(28, 57, 123, 0.66);
 }
-.Achievements_content div
-{
+.Achievements_content div {
   border: 1px solid rgb(255, 255, 255);
   border-radius: 50px;
   padding: 20px;
-  box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.25);  box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 20px 4px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
-.Achievements_content div:first-child
-{
+.Achievements_content div:first-child {
   background: rgba(244, 234, 252, 1);
 }
-.Achievements_content div:nth-child(2)
-{
+.Achievements_content div:nth-child(2) {
   background: rgba(252, 237, 234, 1);
 }
-.Achievements_content div:last-child
-{
+.Achievements_content div:last-child {
   background: rgba(255, 230, 176, 1);
 }
-.Achievements_content a
-{
+.Achievements_content a {
   text-decoration: none;
 }
 
-.Achievements_content div:hover
-{
+.Achievements_content div:hover {
   box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
   transform: scale(0.9);
 }
-@media screen and (max-width: 1200px)
-{
-  .Achievements_hackathon_img
-  {
+@media screen and (max-width: 1200px) {
+  .Achievements_hackathon_img {
     height: 200px;
   }
-  .Achievements_content div
-  {
+  .Achievements_content div {
     margin-top: 20px;
     width: 200px;
   }
-  .Achievements_content div h2
-  {
+  .Achievements_content div h2 {
     font-size: 30px;
     margin: 0px;
   }
-  .Achievements_content div img
-  {
+  .Achievements_content div img {
     width: 200px;
   }
-  .Achievements_content div img:nth-child(2)
-  {
+  .Achievements_content div img:nth-child(2) {
     height: 200px;
   }
-  .Achievements_hr
-  {
+  .Achievements_hr {
     margin: 0px;
     margin-left: 5%;
   }
 }
-
-

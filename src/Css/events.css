@@ -1,5 +1,4 @@
-#Events
-{
+#Events {
   display: flex;
   justify-content: space-between;
   margin-left: 6%;
@@ -7,48 +6,42 @@
   flex-wrap: wrap;
 }
 
-.Events_display{
+.Events_display {
   width: 50%;
   height: 700px;
   overflow-y: auto;
   white-space: nowrap;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 20px
-
+  margin-top: 20px;
 }
-.Events_calender
-{
+.Events_calender {
   width: 40%;
   height: 500px;
 }
-.Event__page_title
-{
+.Event__page_title {
   text-align: start;
   font-size: 50px;
   width: 88%;
   margin: 0px;
 }
 
-.Event__page_title
-{
+.Event__page_title {
   padding-left: 6%;
   padding-right: 6%;
 }
-hr
-{
+hr {
   border-width: 5px;
   width: 88%;
 }
 
-.event p
-{
-  font-family: 'Courier New', Courier, monospace;
+.event p {
+  font-family: "Courier New", Courier, monospace;
 }
 
-.events_btn{
-  font-family: 'Courier New', Courier, monospace;
+.events_btn {
+  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   margin-left: 6%;
   margin-right: 6%;
@@ -58,21 +51,18 @@ hr
   transition: all 0.8s ease;
 }
 
-.events_btn:hover
-{
+.events_btn:hover {
   background-color: black;
   color: white;
 }
 
 @media screen and (max-width: 1200px) {
   .Events_calender,
-  .Events_display
-  {
+  .Events_display {
     width: 100%;
     margin-top: 20px;
   }
-  .Event__page_title
-  {
+  .Event__page_title {
     margin: 0px;
     font-size: 33px;
   }

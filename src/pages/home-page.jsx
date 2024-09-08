@@ -37,7 +37,7 @@ function homePage() {
             <h1>Elevate. Innovate.</h1>
             <h5>Unlocking Potential Through Technology</h5>
           </div>
-         
+
           {/* <img src="/src/assets/club_image.jpeg" className="phone_img"/> */}
         </div>
 
@@ -125,7 +125,9 @@ function homePage() {
               <img src={phone_icon}></img>
               <h2>Phone</h2>
               <p>Feel free to give us a call or send us a message</p>
-              <a href="tel:+254 712-345-6789" className="phone">+254 712-345-6789</a>
+              <a href="tel:+254 712-345-6789" className="phone">
+                +254 712-345-6789
+              </a>
             </div>
             <div>
               <img src={location_icon}></img>
@@ -159,7 +161,9 @@ function homePage() {
         <div className="home_footer">
           <div className="footer_links">
             <div>
-            <Link to="/"><img src={dita_logo}  className="dita_logo" /></Link>
+              <Link to="/">
+                <img src={dita_logo} className="dita_logo" />
+              </Link>
             </div>
 
             <div>
@@ -174,16 +178,22 @@ function homePage() {
             <div>
               <h2>Contact Us</h2>
               <p>
-              Gmail: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
+                Gmail: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
               </p>
-             Location:<a href="">Daystar University, ATHI RIVER , KENYA</a>
+              Location:<a href="">Daystar University, ATHI RIVER , KENYA</a>
             </div>
           </div>
 
           <div className="links">
-            <a href="https://www.linkedin.com/company/dita-daystar-university"><img src={linkedin}/></a>
-            <a href="https://github.com/dita-daystaruni"><img src={github}/></a>
-            <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]"><img src={instagram}/></a>
+            <a href="https://www.linkedin.com/company/dita-daystar-university">
+              <img src={linkedin} />
+            </a>
+            <a href="https://github.com/dita-daystaruni">
+              <img src={github} />
+            </a>
+            <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">
+              <img src={instagram} />
+            </a>
           </div>
 
           <p className="copyright">© {currentYear} | All Rights Reserved</p>

@@ -8,7 +8,7 @@ import Members from "./pages/members";
 import Achievements from "./pages/achievements";
 import TechnicalWriting from "./pages/technical_writing";
 import Hackathon from "./pages/hackathon";
-import Project from "./pages/projects"; 
+import Project from "./pages/projects";
 import Awards from "./pages/awards";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -53,8 +53,7 @@ const router = createBrowserRouter([
   {
     path: "/awards",
     element: <Awards />,
-  },  
-
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

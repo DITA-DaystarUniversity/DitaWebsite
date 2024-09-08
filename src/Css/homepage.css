@@ -7,8 +7,7 @@
   display: flex;
   justify-content: center;
 }
-.phone_img
-{
+.phone_img {
   display: none;
 }
 
@@ -16,28 +15,23 @@
   width: 40%;
   text-align: center;
 }
-.home_about_phone_view
-{
+.home_about_phone_view {
   display: none;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/src/assets/club_image.jpeg);
   /* background-image: url(/src/assets/club_image.jpeg); */
   background-position: center;
   background-size: cover;
   border-radius: 50px;
   height: 500px;
-  
 }
-.home_about_phone_view h1
-{
+.home_about_phone_view h1 {
   margin: 0px;
   margin-top: 150px;
   color: white;
-  font-size: 55px;  
+  font-size: 55px;
 }
-.home_about_phone_view h5
-{
+.home_about_phone_view h5 {
   color: white;
   margin: 0px;
 }
@@ -98,15 +92,15 @@
   text-align: center;
   font-size: 20px;
 }
-.learn_more1{
+.learn_more1 {
   margin-top: 80px;
   color: rgba(0, 0, 0, 0.44);
 }
-.learn_more2{
+.learn_more2 {
   margin-top: 50px;
   color: rgba(0, 0, 0, 0.44);
 }
-.learn_more3{
+.learn_more3 {
   margin-top: 30px;
   color: rgba(0, 0, 0, 0.44);
 }
@@ -285,29 +279,24 @@
   #home_page {
     margin-top: 0px;
   }
-  .home_about_text
-  {
+  .home_about_text {
     display: block;
   }
-  .home_about
-  {
+  .home_about {
     display: none;
   }
-  .home_about_text h1
-  {
+  .home_about_text h1 {
     margin: 0px;
     margin-left: 30px;
     font-size: 50px;
     font-family: inter;
     font-weight: 700;
   }
-  .home_about_phone_view
-  {
+  .home_about_phone_view {
     display: flex;
     margin-top: 20px;
   }
-  .home_about_text h5
-  {
+  .home_about_text h5 {
     text-align: start;
     margin-left: 30px;
     margin-right: 0px;
@@ -316,31 +305,27 @@
     font-family: inter;
     font-weight: 600;
   }
-  .home_services
-  {
+  .home_services {
     margin-top: 50px;
   }
-  .home_services h1
-  {
+  .home_services h1 {
     font-size: 23px;
   }
-  .home_services h2
-  {
+  .home_services h2 {
     font-size: 20px;
   }
-  #services div p
-  {
+  #services div p {
     font-size: 14px;
   }
-  .learn_more1{
+  .learn_more1 {
     margin-top: 30px;
     color: rgba(0, 0, 0, 0.44);
   }
-  .learn_more2{
+  .learn_more2 {
     margin-top: 30px;
     color: rgba(0, 0, 0, 0.44);
   }
-  .learn_more3{
+  .learn_more3 {
     margin-top: 30px;
     color: rgba(0, 0, 0, 0.44);
   }
@@ -354,8 +339,7 @@
   .home_about_img {
     display: none;
   }
-  .phone_img
-  {
+  .phone_img {
     display: block;
     width: 180px;
     height: 200px;
@@ -374,125 +358,100 @@
     margin-bottom: 20px;
     margin-right: 50px;
   }
-  .contact_details div h2 
-  {
+  .contact_details div h2 {
     font-size: 30px;
   }
-  .contact_details div p
-  {
+  .contact_details div p {
     font-size: 13px;
     width: 150px;
   }
-  .contact_details div a
-  {
+  .contact_details div a {
     text-decoration: none;
   }
-  .contact_details div
-  {
+  .contact_details div {
     margin-bottom: 50px;
     width: 150px;
   }
-  .contact_details div:nth-child(2) p
-  {
+  .contact_details div:nth-child(2) p {
     margin-bottom: 28px;
   }
-  .home_contact h1
-  {
+  .home_contact h1 {
     font-size: 40px;
   }
-  .contact_details div:last-child
-  {
+  .contact_details div:last-child {
     margin-top: -30px;
   }
-  .phone
-  {
+  .phone {
     margin-top: 20px;
   }
-  .contact_details div:last-child
-  {
+  .contact_details div:last-child {
     margin-bottom: 0px;
   }
-  .home_partnerships h1
-  {
+  .home_partnerships h1 {
     font-size: 30px;
     text-align: center;
   }
-  .home_partnerships div
-  {
+  .home_partnerships div {
     text-align: center;
     width: 300px;
     margin: 0px;
     margin-left: auto;
     margin-right: auto;
   }
-  .home_partnerships
-  {
+  .home_partnerships {
     padding: 20px;
     margin: 0px;
     margin-top: 50px;
   }
-  .home_partnerships p
-  {
+  .home_partnerships p {
     width: 300px;
     font-size: 15px;
   }
-  .home_partnerships img
-  {
+  .home_partnerships img {
     width: 50px;
     height: 50px;
   }
-  .footer_links
-  {
+  .footer_links {
     width: 300px;
     padding: 20px;
     text-decoration: none;
   }
-  .home_footer
-  {
+  .home_footer {
     margin: 0px;
     padding: 0px;
     margin-left: auto;
     margin-right: auto;
   }
-  .footer_links img
-  {
+  .footer_links img {
     width: 150px;
   }
-  .footer_links h2
-  {
+  .footer_links h2 {
     text-align: center;
     font-size: 25px;
   }
-  .footer_links div a
-  {
+  .footer_links div a {
     font-size: 13px;
     color: blue;
     text-align: center;
   }
-  .home_mission h1
-  {
+  .home_mission h1 {
     font-size: 35px;
     width: 300px;
   }
-  .home_mission p
-  {
+  .home_mission p {
     font-size: 14px;
     width: 300px;
   }
-  .home_mission
-  {
+  .home_mission {
     padding: 50px;
   }
-  .home_mission  div
-  {
+  .home_mission div {
     margin-bottom: 10px;
   }
-  .copyright
-  {
+  .copyright {
     font-size: 12px;
   }
-  .links img
-  {
+  .links img {
     width: 20px;
   }
 }

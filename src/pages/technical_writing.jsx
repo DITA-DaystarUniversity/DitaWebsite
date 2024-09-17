@@ -1,6 +1,6 @@
 import Layout from "/src/layout/homepage_layout.jsx";
 import React, { useRef, useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "/src/Css/technical_writing.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
 function technicalWriting() {
@@ -9,7 +9,6 @@ function technicalWriting() {
   const width = window.innerWidth;
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  
 
   const ditaWriting = [
     {
@@ -71,17 +70,18 @@ function technicalWriting() {
     showSingleWriting(clickedElement.id);
   });
 
- async function showSingleWriting(i) {
+  async function showSingleWriting(i) {
     console.log(i);
     const { name, img, description, topic } = getWritings(i);
     const backgroundImage = await randomImage(width);
-    navigate("/singleWriting", { state: { name, img, description, topic, backgroundImage } });
+    navigate("/singleWriting", {
+      state: { name, img, description, topic, backgroundImage },
+    });
   }
 
-  async function randomImage(width) 
-  {
-      const image = await fetch(`https://random.imagecdn.app/${width}/500`);
-    return image.url
+  async function randomImage(width) {
+    const image = await fetch(`https://random.imagecdn.app/${width}/500`);
+    return image.url;
   }
 
   useEffect(() => {
@@ -91,12 +91,9 @@ function technicalWriting() {
       showWritings();
       setLoading(false);
     }, 3000);
-
   }, []);
 
-
   async function showWritings() {
-
     // displayProjects.current.innerHTML = "";
     for (let i = 0; i < ditaWriting.length; i++) {
       const { name, img, description, topic } = getWritings(i);
@@ -117,21 +114,30 @@ function technicalWriting() {
   return (
     <Layout>
       <div>
-      {loading ? <PropagateLoader
-        color="#02133e"
-        loading={loading}
-        cssOverride={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
-        size={50}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      /> :
-      <div id="technical_writing" ref={EventsPage}>
-        <h1 className="writing_title" >Technical Writing</h1>
-        <hr className="writing_hr" />
-        <div className="technical_writing_content" ref={displayWriting}>
-        </div>
-      </div>
-      }
+        {loading ? (
+          <PropagateLoader
+            color="#02133e"
+            loading={loading}
+            cssOverride={{
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+            size={50}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        ) : (
+          <div id="technical_writing" ref={EventsPage}>
+            <h1 className="writing_title">Technical Writing</h1>
+            <hr className="writing_hr" />
+            <div
+              className="technical_writing_content"
+              ref={displayWriting}
+            ></div>
+          </div>
+        )}
       </div>
     </Layout>
   );

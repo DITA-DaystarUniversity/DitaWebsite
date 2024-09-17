@@ -23,8 +23,7 @@
   margin-left: 70px;
   font-size: 35px;
 }
-.event_title
-{
+.event_title {
   width: 100%;
   text-align: start;
 }
@@ -132,8 +131,7 @@ hr {
     scroll-snap-stop: always;
     width: 400px;
   }
-  .Events_calender
-  {
+  .Events_calender {
     display: none;
   }
   .event {
@@ -182,13 +180,12 @@ hr {
     font-size: 13px;
     margin-left: 70px;
   }
-  #Events
-  {
+  #Events {
     padding: 0px;
     margin: 0px;
     margin-top: -30px;
   }
-  .event_title{
+  .event_title {
     margin: 0px;
     font-size: 30px;
   }

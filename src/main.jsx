@@ -68,11 +68,12 @@ const router = createBrowserRouter([
   {
     path: "/singleWriting",
     element: <SingleWriting />,
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  // Prevents rerendering
   // <React.StrictMode>
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
   //  </React.StrictMode>
 );

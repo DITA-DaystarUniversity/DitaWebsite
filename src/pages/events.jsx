@@ -3,7 +3,7 @@ import Layout from "/src/layout/homepage_layout.jsx";
 import React, { useRef, useEffect } from "react";
 import Calender from "/src/components/calender.jsx";
 import calender_icon from "/src/assets/calender_icon.png";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function events() {
   const displayEvents = useRef(null);
@@ -19,7 +19,8 @@ function events() {
       description: "This is a description of event 1",
       registration_link: "https://www.google.com",
       img: "https://randompicturegenerator.com/img/car-generator/g91d447ecfe72f9eec67075695beb60be3f06e9f341d675a76e847a2fd150139425d7ca3a1de19130389065a4706df7a5_640.jpg",
-      details: "The Daystar Tech Innovation Challenge 2024 is an exciting one-day event organized by the Daystar Information Technology Association (DITA) to showcase student talent in technology and innovation. The event aims to bring together tech enthusiasts, coders, and innovators from across the university to present their projects and ideas that could shape the future.This year’s theme is 'Innovation for Impac', focusing on how technology can address real-world problems in areas like healthcare, education, and sustainability.",
+      details:
+        "The Daystar Tech Innovation Challenge 2024 is an exciting one-day event organized by the Daystar Information Technology Association (DITA) to showcase student talent in technology and innovation. The event aims to bring together tech enthusiasts, coders, and innovators from across the university to present their projects and ideas that could shape the future.This year’s theme is 'Innovation for Impac', focusing on how technology can address real-world problems in areas like healthcare, education, and sustainability.",
     },
     {
       title: "Event 30",
@@ -86,10 +87,9 @@ function events() {
 
   document.addEventListener("click", (event) => {
     const clickedElement = event.target;
-    console.log('Text content:', clickedElement.id);
+    console.log("Text content:", clickedElement.id);
     // navigate("/SingleEvent/" );
     showSingleEvent(clickedElement.id);
-
   });
 
   function getEvents(i) {
@@ -100,18 +100,20 @@ function events() {
     const link = ditaEvents[i].registration_link;
     const img = ditaEvents[i].img;
     const details = ditaEvents[i].details;
-    return { title, start, end, description, link , img , details };
+    return { title, start, end, description, link, img, details };
   }
 
   function showSingleEvent(i) {
     // console.log(i);
-    const { title, start, end, description, link , img , details } = getEvents(i);
+    const { title, start, end, description, link, img, details } = getEvents(i);
     const date = new Date(ditaEvents[i].start);
     const daydate = date.getDate();
     const month = date.getMonth();
     const eventMonth = months[month];
     const year = date.getFullYear();
-    navigate("/singleEvent/" , { state: { title, img , details , daydate , eventMonth , year , link } } );
+    navigate("/singleEvent/", {
+      state: { title, img, details, daydate, eventMonth, year, link },
+    });
   }
 
   useEffect(() => {

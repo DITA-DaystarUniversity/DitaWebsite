@@ -3,8 +3,7 @@
   margin-right: 5%; */
   margin-top: 50px;
 }
-.Event__page_title
-{
+.Event__page_title {
   margin-top: 30px;
 }
 #Achievements h1 {
@@ -52,7 +51,7 @@
 .Acheivements_Hackathon {
   background: rgba(252, 237, 234, 1);
 }
-.Acheivements_Award{
+.Acheivements_Award {
   background: rgba(255, 230, 176, 1);
 }
 .Achievements_content a {
@@ -64,9 +63,9 @@
   transform: scale(0.9);
 }
 @media screen and (max-width: 1200px) {
-#Achievements {
-  margin: 0px;
-}
+  #Achievements {
+    margin: 0px;
+  }
   .Achievements_hackathon_img {
     height: 200px;
   }
@@ -88,8 +87,7 @@
     margin: 0px;
     margin-left: 5%;
   }
-  .Achievements_content
-  {
+  .Achievements_content {
     margin-top: 0px;
   }
 }

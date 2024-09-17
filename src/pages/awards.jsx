@@ -66,7 +66,7 @@ function awards() {
       awardCategory: "Category 10",
       awardProduct: "Product 10",
       year: "2019",
-    }
+    },
   ];
 
   function display_Awards() {

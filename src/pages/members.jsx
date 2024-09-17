@@ -1,5 +1,5 @@
 import Layout from "/src/layout/homepage_layout.jsx";
-import React, { useRef, useState , useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "/src/Css/members.css";
 import github from "/src/assets/github_logo.png";
 import linkedinwhite from "/src/assets/linkedin-white.png";
@@ -105,17 +105,17 @@ function members() {
     const img = ditaMembers[i].img;
     const githubLink = ditaMembers[i].github;
     const linkedInLink = ditaMembers[i].linkedIn;
-    return {name , img ,role,  description , githubLink , linkedInLink}
+    return { name, img, role, description, githubLink, linkedInLink };
   }
 
-
   useEffect(() => {
-    async function  display_Members() {
-    displayMembers.current.innerHTML = "";
-    for (let i = 0; i <= ditaMembers.length; i++) {
-      const color = randomColor();
-      const {name , img , role , description , githubLink , linkedInLink} = getMembers(i)
-      displayMembers.current.innerHTML += `
+    async function display_Members() {
+      displayMembers.current.innerHTML = "";
+      for (let i = 0; i <= ditaMembers.length; i++) {
+        const color = randomColor();
+        const { name, img, role, description, githubLink, linkedInLink } =
+          getMembers(i);
+        displayMembers.current.innerHTML += `
       <div className="member" style="width: 30%; min-width: 300px; height: 500px; display: flex; flex-direction: column; background: ${color}; margin: 20px; align-items: center; padding-top: 20px">
         <img src=${img} style="width: 40%; height: 40%; border: 1px solid black; border-radius: 50%; min-width: 200px; margin-left: auto; margin-right: auto" />
         <h2 style="text-align: center; font-family: 'Helvetica', sans-serif; font-size: 24px">${name}</h2>
@@ -133,19 +133,17 @@ function members() {
 
       </div>
       `;
+      }
     }
-  }
     display_Members();
   }, []);
-
 
   return (
     <Layout>
       <div id="members">
         <h1 className="Event__page_title">Meet Our Members</h1>
         <hr className=".Achievements_hr" />
-        <div className="members_content" ref={displayMembers}>
-        </div>
+        <div className="members_content" ref={displayMembers}></div>
       </div>
     </Layout>
   );

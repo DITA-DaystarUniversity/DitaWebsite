@@ -1,12 +1,11 @@
 import Layout from "/src/layout/homepage_layout.jsx";
 import "/src/Css/projects.css";
-import React, { useRef , useState , useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 function projects() {
   const displayProjects = useRef(null);
   const displayProject = useRef(null);
   const navigate = useNavigate();
-
 
   const Dita_Projects = [
     {
@@ -43,9 +42,7 @@ function projects() {
       description: "This is a description of project 5",
       link: "https://www.google.com",
       github: "https://www.github.com",
-    }
-  
-    
+    },
   ];
 
   function getProjects(i) {
@@ -54,7 +51,7 @@ function projects() {
     const description = Dita_Projects[i].description;
     const link = Dita_Projects[i].link;
     const github = Dita_Projects[i].github;
-    return { name, img, description , link , github };
+    return { name, img, description, link, github };
   }
 
   function randomColor() {
@@ -66,27 +63,23 @@ function projects() {
 
   document.addEventListener("click", (event) => {
     const clickedElement = event.target;
-    console.log('Text content:', clickedElement.id);
+    console.log("Text content:", clickedElement.id);
     showSingleProject(clickedElement.id);
-
   });
-
 
   function showSingleProject(i) {
     // console.log(i);
-    const { name , img, description, link , github } = getProjects(i);
-    navigate("/singleProject/", { state: { name , img, description, link , github } });
+    const { name, img, description, link, github } = getProjects(i);
+    navigate("/singleProject/", {
+      state: { name, img, description, link, github },
+    });
   }
-
-
-
 
   useEffect(() => {
     function showProjects() {
-    
       // displayProjects.current.innerHTML = "";
       for (let i = 0; i < Dita_Projects.length; i++) {
-        const { name , img, description } = getProjects(i);
+        const { name, img, description } = getProjects(i);
         const color = randomColor();
         displayProjects.current.innerHTML += `
         <div id=${i} class="project" style="width: 500px; min-width: 300px; height: 500px; display: flex; flex-direction: column; background: ${color}; margin: 10px; align-items: center;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); padding-top: 20px; cursor: pointer">
@@ -97,8 +90,8 @@ function projects() {
         `;
       }
     }
-  showProjects();
-}, []);
+    showProjects();
+  }, []);
 
   return (
     <Layout>
@@ -106,8 +99,7 @@ function projects() {
         {/* Make a general css for this */}
         <h1 className="Event__page_title">Explore Our Projects</h1>
         <hr />
-        <div className="projects_content" ref={displayProjects}>
-        </div>
+        <div className="projects_content" ref={displayProjects}></div>
       </div>
     </Layout>
   );

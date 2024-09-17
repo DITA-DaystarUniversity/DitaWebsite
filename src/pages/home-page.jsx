@@ -16,11 +16,16 @@ import instagram from "/src/assets/instagram_logo.png";
 import Homepage_layout from "/src/layout/homepage_layout.jsx";
 import { Link } from "react-router-dom";
 import dita_logo from "/public/ditaLogo-3d409f18.png";
-// import Homepage_slider from "/src/components/homepage_slider.jsx"
+import { useState , useRef } from "react";
+import Homepage_slider from "/src/components/homepage_slider.jsx";
+
+
 
 function homePage() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
+  const  display_Leaders = useRef(null);
+  
   return (
     <Homepage_layout>
       <div id="home_page">
@@ -38,7 +43,6 @@ function homePage() {
             <h5>Unlocking Potential Through Technology</h5>
           </div>
 
-          {/* <img src="/src/assets/club_image.jpeg" className="phone_img"/> */}
         </div>
 
         <div className="home_services">
@@ -78,19 +82,20 @@ function homePage() {
           </div>
         </div>
 
-        {/* <div className="home_meet_team">
+        <div className="home_meet_team">
           <h1>Meet Our Team</h1>
           <p>Meet Our Team. Get to know the talented individuals behind DITA</p>
 
-          <div className="OurTeams">
-            <Homepage_slider />
+          <div className="OurTeams" useRef={display_Leaders}>
+            <Homepage_slider/>
           </div>
           
-        </div> */}
+        </div>
 
-        <div className="home_mission">
+
+
+          <div className="home_mission">
           <h1>Dita's Mission</h1>
-          <div>
             <p>
               EmailFor any inquiries or collaborations, please fill out the form
               below.hello@relume.ioPhoneFeel free to give us a call or send us a
@@ -98,8 +103,9 @@ function homePage() {
               hours.123 Sample St, Sydney NSW 2000 AU
             </p>
           </div>
+
+          <div className="home_vision">
           <h1>Dita's Vision</h1>
-          <div>
             <p>
               EmailFor any inquiries or collaborations, please fill out the form
               below. hello@relume.ioPhoneFeel free to give us a call or send us
@@ -107,8 +113,7 @@ function homePage() {
               hours.123 Sample St, Sydney NSW 2000 AU
             </p>
           </div>
-        </div>
-
+    
         <div className="home_contact">
           <h1>Contact Us</h1>
           <div className="contact_details">
@@ -133,7 +138,9 @@ function homePage() {
               <img src={location_icon}></img>
               <h2>Location</h2>
               <p>Visit our office during school hours</p>
+              <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">
               <p>Daystar University, ATHI RIVER, Kenya</p>
+              </a>
             </div>
           </div>
         </div>
@@ -156,7 +163,7 @@ function homePage() {
           </div>
         </div>
 
-        <div className="empty_div"></div>
+        {/* <div className="empty_div"></div> */}
 
         <div className="home_footer">
           <div className="footer_links">
@@ -180,7 +187,7 @@ function homePage() {
               <p>
                 Gmail: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
               </p>
-              Location:<a href="">Daystar University, ATHI RIVER , KENYA</a>
+              Location:<a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">Daystar University, ATHI RIVER , KENYA</a>
             </div>
           </div>
 
@@ -191,7 +198,7 @@ function homePage() {
             <a href="https://github.com/dita-daystaruni">
               <img src={github} />
             </a>
-            <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">
+            <a href="">
               <img src={instagram} />
             </a>
           </div>

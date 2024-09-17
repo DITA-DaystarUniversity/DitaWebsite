@@ -13,7 +13,8 @@ function Calender(events) {
     document.body.clientWidth;
   let calenderTools = "dayGridMonth,timeGridWeek,timeGridDay";
   if (displayWidth < 768) {
-    calenderTools = "";
+    // calenderTools = "";
+    return;
   }
 
   return (

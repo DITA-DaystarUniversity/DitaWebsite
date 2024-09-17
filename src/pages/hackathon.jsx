@@ -1,4 +1,4 @@
-import Layout from "/src/layout/pages_layout.jsx";
+import Layout from "/src/layout/homepage_layout.jsx";
 import "/src/Css/hackathon.css";
 
 function Hackathon() {

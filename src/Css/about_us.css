@@ -1,33 +1,46 @@
 #about_us {
   margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .about_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .about_us_text {
-  width: 40%;
+  width: 50%;
   text-align: start;
 }
 .about_us_text h1 {
-  font-size: 70px;
+  font-size: 90px;
+  font-family: inter;
+  font-weight: 600;
   margin: 0px;
+  padding-left: 0px;
 }
 .about_us_text p {
-  font-size: 25px;
-  /* width: 550px; */
+  font-family: Raleway;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  width: 800px;
 }
 .about_us_img {
-  margin-left: 20px;
-  width: 40%;
+  /* margin-left: 20px; */
+  margin-right: 60px;
+  width: 45%;
   height: 700px;
   background-image: url(src/assets/daystar_logo.jpeg);
   background-position: center;
   background-size: cover;
   border-radius: 50px;
+  border: 1px solid black;
 }
 #about_content_phone_view {
   display: none;
@@ -48,6 +61,7 @@
     background-size: cover;
     /* color: white; */
     background: blur(10px);
+    margin: 0px;
     /* border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
   }
   .about_us_text p {

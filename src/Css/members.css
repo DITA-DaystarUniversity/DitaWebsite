@@ -1,9 +1,10 @@
 .members_content {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 5%;
 }
 #members {
-  padding-left: 5%;
+  margin-top: 50px;
 }
 
 .members_display {
@@ -39,11 +40,25 @@
     margin-left: -14px;
   }
   .members_content {
+    margin-top: 20px;
+    display: flex;
+    overflow-x: auto;
+    height: 600px;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  .members_content::-webkit-scrollbar {
     display: none;
   }
-}
-@media screen and (max-width: 1300px) {
-  .members_content {
-    margin-left: 15%;
+  #members {
+    margin-top: 0px;
+  }
+  .members_content{
+    display: block;
+    /* flex-wrap: nowrap; */
+    padding-left: 2%;
   }
 }

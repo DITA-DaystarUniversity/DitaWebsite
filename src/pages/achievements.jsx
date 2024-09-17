@@ -1,4 +1,4 @@
-import Layout from "/src/layout/pages_layout.jsx";
+import Layout from "/src/layout/homepage_layout.jsx";
 import "/src/Css/achievements.css";
 import hackathon from "/src/assets/hackathons.jpeg";
 import project from "/src/assets/projects.jpeg";
@@ -8,18 +8,18 @@ import { Link } from "react-router-dom";
 function Achievements() {
   return (
     <Layout>
+      <h1 className="Event__page_title">Achievements</h1>
+       <hr className="Achievements_hr" />
       <div id="Achievements">
-        <h1 className="Achievements_title">Achievements</h1>
-        <hr className="Achievements_hr" />
         <div className="Achievements_content">
           <Link to="/projects">
-            <div>
+            <div className="Acheivements_Project">
               <img src={project} width={400}></img>
               <h2>Projects</h2>
             </div>
           </Link>
           <Link to="/hackathon">
-            <div>
+            <div className="Acheivements_Hackathon">
               <img
                 src={hackathon}
                 width={400}
@@ -30,7 +30,7 @@ function Achievements() {
             </div>
           </Link>
           <Link to="/awards">
-            <div>
+            <div className="Acheivements_Award">
               <img src={award} width={400}></img>
               <h2>Awards</h2>
             </div>

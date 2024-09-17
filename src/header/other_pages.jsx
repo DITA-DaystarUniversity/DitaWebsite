@@ -15,6 +15,9 @@ function other_pages() {
   return (
     <>
       <div id="header_other">
+      <Link to="/">
+          <img src={dita_logo} width={100} className="dita_logo" />
+        </Link>
         <button
           className="menu_btn"
           onClick={() => {
@@ -22,7 +25,7 @@ function other_pages() {
 
             if (document.querySelector(".menu_div").style.display === "none") {
               document.querySelector(".menu_div").style.display = "flex";
-              document.querySelector(".menu_img").src = cancel;
+              document.querySelector(".menu_btn").style.display = "none";
             } else {
               document.querySelector(".menu_div").style.display = "none";
               document.querySelector(".menu_img").src = menu;
@@ -31,12 +34,16 @@ function other_pages() {
         >
           <img src={menu} className="menu_img" />
         </button>
-        <Link to="/">
-          <img src={dita_logo} width={100} className="dita_logo" />
-        </Link>
+
       </div>
 
       <div className="menu_div" id="menu">
+        <button className="cancel_button" onClick={() => {
+          document.querySelector(".menu_div").style.display = "none"
+          document.querySelector(".menu_btn").style.display = "flex";
+          }}>
+          <img src={cancel} className="cancel_img" />
+        </button>
         <Link to="/about">
           About us <img src={about_us_img} width={20} />
         </Link>

@@ -10,6 +10,9 @@ import TechnicalWriting from "./pages/technical_writing";
 import Hackathon from "./pages/hackathon";
 import Project from "./pages/projects";
 import Awards from "./pages/awards";
+import Single_event from "./pages/singleEvent";
+import Single_project from "./pages/singleproject";
+import SingleWriting from "./pages/singleWriting";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -54,10 +57,22 @@ const router = createBrowserRouter([
     path: "/awards",
     element: <Awards />,
   },
+  {
+    path: "/singleEvent",
+    element: <Single_event />,
+  },
+  {
+    path: "/singleproject",
+    element: <Single_project />,
+  },
+  {
+    path: "/singleWriting",
+    element: <SingleWriting />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  //  </React.StrictMode>
 );

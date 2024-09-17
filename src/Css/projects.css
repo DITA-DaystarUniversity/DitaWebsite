@@ -1,0 +1,63 @@
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.project {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+}
+.projects_content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+#projects {
+  background-color: #ffffff;
+  margin-top: 50px;
+}
+#projects h1 {
+  color: rgba(28, 57, 123, 0.66);
+}
+
+.project_mobile_view {
+  font-family: "Helvetica", sans-serif;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 10px;
+  margin-top: 20px;
+}
+.project_mobile_view h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.project_mobile_view a {
+  text-align: center;
+  text-decoration: none;
+}
+.project_mobile {
+  display: none;
+}
+
+.project {
+  width: 500px;
+  min-width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+  #projects {
+    margin: 0;
+    width: 100%;
+  }
+}

@@ -2,11 +2,14 @@ import Layout from "/src/layout/homepage_layout.jsx";
 import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import "/src/Css/technical_writing.css";
+import PropagateLoader from "react-spinners/PropagateLoader";
 function technicalWriting() {
   const displayWriting = useRef(null);
   const EventsPage = useRef(null);
   const width = window.innerWidth;
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  
 
   const ditaWriting = [
     {
@@ -72,7 +75,7 @@ function technicalWriting() {
     console.log(i);
     const { name, img, description, topic } = getWritings(i);
     const backgroundImage = await randomImage(width);
-    navigate("/singleWriting/", { state: { name, img, description, topic, backgroundImage } });
+    navigate("/singleWriting", { state: { name, img, description, topic, backgroundImage } });
   }
 
   async function randomImage(width) 
@@ -82,34 +85,53 @@ function technicalWriting() {
   }
 
   useEffect(() => {
-    async function showWritings() {
-      // displayProjects.current.innerHTML = "";
-      for (let i = 0; i < ditaWriting.length; i++) {
-        const { name, img, description, topic } = getWritings(i);
-        const color = randomColor();
-        const backgroundImage = await randomImage(width);
-        displayWriting.current.innerHTML += `
-        <div class="technical" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(${backgroundImage});repeat: no-repeat; ">
-          <img src=${img} />
-          <h2 >${name}</h2>
-          <h2 class="topic">${topic}</h2>
-          <p >${description}</p>
-          <button id="${i}">Continue Reading</button>
-        </div>
-        `;
-      }
-    }
-    showWritings();
+    setLoading(true);
+
+    setTimeout(() => {
+      showWritings();
+      setLoading(false);
+    }, 3000);
+
   }, []);
+
+
+  async function showWritings() {
+
+    // displayProjects.current.innerHTML = "";
+    for (let i = 0; i < ditaWriting.length; i++) {
+      const { name, img, description, topic } = getWritings(i);
+      const color = randomColor();
+      const backgroundImage = await randomImage(width);
+      displayWriting.current.innerHTML += `
+      <div class="technical" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(${backgroundImage});repeat: no-repeat; ">
+        <img src=${img} />
+        <h2 >${name}</h2>
+        <h2 class="topic">${topic}</h2>
+        <p >${description}</p>
+        <button id="${i}">Continue Reading</button>
+      </div>
+      `;
+    }
+  }
 
   return (
     <Layout>
+      <div>
+      {loading ? <PropagateLoader
+        color="#02133e"
+        loading={loading}
+        cssOverride={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+        size={50}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      /> :
       <div id="technical_writing" ref={EventsPage}>
         <h1 className="writing_title" >Technical Writing</h1>
         <hr className="writing_hr" />
         <div className="technical_writing_content" ref={displayWriting}>
-          {/* <button onClick={() => display_Writing()}>Display All</button> */}
         </div>
+      </div>
+      }
       </div>
     </Layout>
   );

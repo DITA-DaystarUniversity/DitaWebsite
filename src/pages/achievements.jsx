@@ -9,7 +9,7 @@ function Achievements() {
   return (
     <Layout>
       <h1 className="Event__page_title">Achievements</h1>
-       <hr className="Achievements_hr" />
+      <hr className="Achievements_hr" />
       <div id="Achievements">
         <div className="Achievements_content">
           <Link to="/projects">

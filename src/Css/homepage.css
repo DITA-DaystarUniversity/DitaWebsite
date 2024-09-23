@@ -131,8 +131,7 @@
   scroll-padding: 0 24px;
 }
 
-.OurTeams div
-{
+.OurTeams div {
   scroll-snap-align: center;
   scroll-snap-stop: always;
   scroll-padding: 0 24px;
@@ -141,27 +140,31 @@
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.OurTeams::-webkit-scrollbar
-{
+.OurTeams::-webkit-scrollbar {
   display: none;
 }
-.OurTeams div:first-child
+.Links
 {
+  display: flex;
+  justify-content: start;
+}
+.Links a
+{
+  margin: 5px;
+}
+.OurTeams div:first-child {
   padding-left: 10px;
 }
-.OurTeams div:last-child
-{
+.OurTeams div:last-child {
   padding-right: 0px;
 }
 
-.OurTeams div p
-{
+.OurTeams div p {
   font-size: 14px;
   text-align: start;
 }
-.OurTeams div img
-{
-  border-radius:50%;
+.OurTeams div img {
+  border-radius: 50%;
   width: 150px;
   height: 150px;
 }
@@ -178,7 +181,7 @@
   padding-top: 150px;
   padding-bottom: 150px;
 }
-.home_vision{
+.home_vision {
   color: white;
   text-align: center;
   display: flex;
@@ -205,8 +208,7 @@
   font: inter;
 }
 .home_vision p,
-.home_mission p 
-{
+.home_mission p {
   width: 600px;
   font-size: 30px;
 }
@@ -214,14 +216,12 @@
   font-size: 48px;
   margin: 40px;
 }
-.home_contact a
-{
+.home_contact a {
   text-decoration: none;
   color: black;
   transition: all 1s;
 }
-.home_contact a:hover
-{
+.home_contact a:hover {
   color: rgb(84, 84, 205);
 }
 .contact_details div p {
@@ -528,28 +528,22 @@
   .links img {
     width: 20px;
   }
-  .home_meet_team
-  {
+  .home_meet_team {
     margin-top: 50px;
   }
-  .home_meet_team h1
-  {
+  .home_meet_team h1 {
     font-size: 27px;
   }
-  .home_meet_team p
-  {
+  .home_meet_team p {
     font-size: 14px;
-    font-family: sans-serif; ;
+    font-family: sans-serif;
   }
-  .OurTeams div img
-{
-  border-radius:50%;
-  width: 150px;
-  height: 150px;
+  .OurTeams div img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .OurTeams div {
+    padding: 0px;
+  }
 }
-.OurTeams div 
-{
-  padding: 0px;
-}
-}
-

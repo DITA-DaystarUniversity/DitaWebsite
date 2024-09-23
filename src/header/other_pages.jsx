@@ -15,7 +15,7 @@ function other_pages() {
   return (
     <>
       <div id="header_other">
-      <Link to="/">
+        <Link to="/">
           <img src={dita_logo} width={100} className="dita_logo" />
         </Link>
         <button
@@ -34,14 +34,16 @@ function other_pages() {
         >
           <img src={menu} className="menu_img" />
         </button>
-
       </div>
 
       <div className="menu_div" id="menu">
-        <button className="cancel_button" onClick={() => {
-          document.querySelector(".menu_div").style.display = "none"
-          document.querySelector(".menu_btn").style.display = "flex";
-          }}>
+        <button
+          className="cancel_button"
+          onClick={() => {
+            document.querySelector(".menu_div").style.display = "none";
+            document.querySelector(".menu_btn").style.display = "flex";
+          }}
+        >
           <img src={cancel} className="cancel_img" />
         </button>
         <Link to="/about">

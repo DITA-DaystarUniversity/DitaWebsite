@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
+  
 }
 .technical_writing_content button {
   margin-top: 50px;
@@ -12,12 +14,10 @@
   height: 50px;
   cursor: pointer;
 }
-#technical_writing
-{
+#technical_writing {
   margin-top: 30px;
 }
-.writing_title
-{
+.writing_title {
   width: 97%;
   margin: 0px;
   margin-left: auto;
@@ -25,34 +25,62 @@
   font-size: 45px;
   margin-top: 50px;
 }
-.writing_hr
-{
+.writing_hr {
   width: 97%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.technical
-{
-  width: 45%; min-width: 300px; height: 400px; display: flex; flex-direction: column; margin: 10px; align-items: start;padding: 50px; padding-bottom: 0px; padding-right: 0px; background-size: cover;
+.technical {
+  width: 43%;
+  /* background-color: aquamarine; */
+  min-width: 300px;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: start;
+  padding: 50px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  background-size: cover;
 }
-.technical img
-{
-  width: 150px; height: 150px; border: 1px solid black; border-radius: 50%;
+.technical img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 50%;
 }
-.technical h2
-{
-  text-align: center; font-family: 'Helvetica', sans-serif; font-size: 24px; margin: 5px; margin-top: 20px; color: white;
+.technical h2 {
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  font-size: 24px;
+  margin: 5px;
+  margin-top: 20px;
+  color: white;
 }
-.topic
-{
-  font-size: 15px;color: yellow;
+.topic {
+  font-size: 15px;
+  /* color: yellow; */
 }
-.technical p
-{
-  font-family: 'Helvetica', sans-serif; font-size: 16px; margin: 5px; color: white
+.technical p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  margin: 5px;
+  color: white;
 }
-.technical button
-{
-  position:relative; left: 82%; background: rgba(28, 57, 123); color: white; font-size: 15px; border: none; border-radius: 0px; cursor: pointer;
+.technical button {
+  margin-top: 20px;
+  background: rgba(28, 57, 123);
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
 }
-
+.button_div
+{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}

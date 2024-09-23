@@ -12,8 +12,9 @@ function About_us() {
             <h1 className="Event__page_title">About Us</h1>
             <p>
               DITA is first of all a community. We learn together and grow
-              together. We strive for excellence as upcoming professionals.<br/>
-               We are quick to embrace new members & introduce them into our
+              together. We strive for excellence as upcoming professionals.
+              <br />
+              We are quick to embrace new members & introduce them into our
               culture. We are a tech hub.Technology is our surname. In DITA, you
               matter.
             </p>

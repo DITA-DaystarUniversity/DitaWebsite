@@ -8,7 +8,7 @@
 }
 
 .Events_display {
-  width: 50%;
+  width: 52%;
   height: 700px;
   overflow-y: auto;
   white-space: nowrap;
@@ -23,8 +23,7 @@
   margin-left: 70px;
   font-size: 35px;
 }
-.event_title
-{
+.event_title {
   width: 100%;
   text-align: start;
 }
@@ -63,11 +62,10 @@
   text-align: center;
 }
 .events_details {
-  margin-left: 50px;
-  border-right: 1px solid black;
-  width: 120px;
+  width: 420px;
   padding-right: 20px;
   padding-top: -30px;
+  text-wrap: wrap;
 }
 .events_details h2 {
   width: 100%;
@@ -76,9 +74,9 @@
   font-size: 30px;
 }
 .events_details div {
-  width: 100px;
+  width: 350px;
   margin-left: 250px;
-  font-size: 20px;
+  font-size: 15px;
 }
 .events_details a {
   width: 100px;
@@ -132,8 +130,7 @@ hr {
     scroll-snap-stop: always;
     width: 400px;
   }
-  .Events_calender
-  {
+  .Events_calender {
     display: none;
   }
   .event {
@@ -182,13 +179,12 @@ hr {
     font-size: 13px;
     margin-left: 70px;
   }
-  #Events
-  {
+  #Events {
     padding: 0px;
     margin: 0px;
     margin-top: -30px;
   }
-  .event_title{
+  .event_title {
     margin: 0px;
     font-size: 30px;
   }

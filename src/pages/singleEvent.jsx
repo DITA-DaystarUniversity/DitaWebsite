@@ -4,9 +4,9 @@ import "/src/Css/singleEvents.css";
 
 function Single_event() {
   const location = useLocation();
-  const { title, img, details, daydate, eventMonth, year, link } =
+  const { title, description, link, img, details , time , Eventlocation} =
     location.state || {};
-  console.log(title, img, details, daydate, eventMonth, year, link);
+  console.log(title, description, link, img, details , time , Eventlocation);
   return (
     <Layout>
       <h2 className="event_title">{title}</h2>
@@ -19,20 +19,15 @@ function Single_event() {
         </div>
         <div className="Single_events_details">
           <div>
-            <h3>Date: </h3>
-            <p>
-              {daydate} {eventMonth} {year}
-            </p>
             <h3>Time: </h3>
-            <p>10:00pm</p>
+            <p>{time}</p>
             <h3>Location: </h3>
-            <p>Online</p>
+            <p>{Eventlocation}</p>
           </div>
           <div className="registration_details">
             <h3>Registration Details</h3>
             <div style={{ marginBottom: "20px" }}>
-              fjsiidj jsjdnc kakdoc ndnfjvn madnfnv msncnvnv msncncn msnncnf
-              mnfnc fffjfnhfbcjf kdnfnnvjdnvj smnvsdnjnjd
+              <p>{details}</p>
             </div>
             <a href={link}>Register Here</a>
           </div>

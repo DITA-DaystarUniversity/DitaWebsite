@@ -143,6 +143,15 @@
 .OurTeams::-webkit-scrollbar {
   display: none;
 }
+.Links
+{
+  display: flex;
+  justify-content: start;
+}
+.Links a
+{
+  margin: 5px;
+}
 .OurTeams div:first-child {
   padding-left: 10px;
 }

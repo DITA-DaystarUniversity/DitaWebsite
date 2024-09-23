@@ -19,6 +19,7 @@ import dita_logo from "/public/ditaLogo-3d409f18.png";
 import { useState, useRef } from "react";
 import Homepage_slider from "/src/components/homepage_slider.jsx";
 
+
 function homePage() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();

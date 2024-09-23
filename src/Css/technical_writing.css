@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
+  
 }
 .technical_writing_content button {
   margin-top: 50px;
@@ -29,9 +31,10 @@
   margin-bottom: 20px;
 }
 .technical {
-  width: 45%;
+  width: 43%;
+  /* background-color: aquamarine; */
   min-width: 300px;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -57,7 +60,7 @@
 }
 .topic {
   font-size: 15px;
-  color: yellow;
+  /* color: yellow; */
 }
 .technical p {
   font-family: "Helvetica", sans-serif;
@@ -66,12 +69,18 @@
   color: white;
 }
 .technical button {
-  position: relative;
-  left: 82%;
+  margin-top: 20px;
   background: rgba(28, 57, 123);
   color: white;
   font-size: 15px;
   border: none;
   border-radius: 0px;
   cursor: pointer;
+}
+.button_div
+{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }

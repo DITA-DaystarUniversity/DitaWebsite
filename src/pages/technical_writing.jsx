@@ -32,9 +32,9 @@ function technicalWriting() {
   async function showSingleWriting(i) {
     console.log(i);
     const { name, img, description, topic } = getWritings(i);
-    const backgroundImage = await randomImage(width);
+    // const backgroundImage = await randomImage(width);
     navigate("/singleWriting", {
-      state: { name, img, description, topic, backgroundImage },
+      state: { name, img, description, topic },
     });
   }
 

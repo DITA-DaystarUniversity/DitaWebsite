@@ -32,6 +32,8 @@
 }
 .dita_logo {
   min-width: 100px;
+  margin: 0px;
+  margin-left: -30px;
 }
 .menu_img {
   width: 30px;
@@ -52,6 +54,10 @@
   .menu_div {
     display: flex;
   }
+}
+.dita_logo
+{
+  padding-left: -40px;
 }
 
 @media screen and (max-width: 1200px) {

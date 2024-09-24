@@ -10,7 +10,7 @@ function singleWriting() {
       <div
         className="singleWriting"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url(${backgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url(https://random.imagecdn.app/500/500)`,
           backgroundRepeat: "no-repeat",
         }}
       >

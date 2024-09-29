@@ -4,15 +4,22 @@ import "/src/Css/singleEvents.css";
 
 function Single_event() {
   const location = useLocation();
-  const { title, description, link, img, details , time , Eventlocation} =
-    location.state || {};
-  console.log(title, description, link, img, details , time , Eventlocation);
+  const {
+    title,
+    description,
+    link,
+    img,
+    details,
+    time,
+    Eventlocation,
+    registration_details,
+  } = location.state || {};
   return (
     <Layout>
       <h2 className="event_title">{title}</h2>
       <div className="single_event">
         <div className="single_event_img">
-          <img src={img} alt={title} />
+          <img src={`/Images/Events/${img}`} alt={title} />
           <h2>Event Overview</h2>
           <hr />
           <p>{details}</p>
@@ -27,7 +34,7 @@ function Single_event() {
           <div className="registration_details">
             <h3>Registration Details</h3>
             <div style={{ marginBottom: "20px" }}>
-              <p>{details}</p>
+              <p>{registration_details}</p>
             </div>
             <a href={link}>Register Here</a>
           </div>

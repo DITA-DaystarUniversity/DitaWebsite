@@ -21,61 +21,135 @@ function members() {
     fetch("http://localhost:3000/api/v1/members")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); 
-        setMembers(data) 
-        setLoading(false)
+        setMembers(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
       });
   }
-  
-
 
   useEffect(() => {
     fetchJson();
-
   }, []);
 
   return (
     <Layout>
-       {loading ? <PropagateLoader
-        color="#02133e"
-        loading={loading}
-        cssOverride={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
-        size={50}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      /> :
-      <div id="members">
-        <h1 className="Event__page_title">Meet Our Members</h1>
-        <hr className=".Achievements_hr" />
-        <div className="members_content" ref={displayMembers}>
-          {Members.map((member, index) => 
-            {
-              const { name, img, role, description, githubLink, linkedInLink } = member;
+      {loading ? (
+        <PropagateLoader
+          color="#02133e"
+          loading={loading}
+          cssOverride={{
+            position: "fixed",
+            top: "50%",
+            left: "45%",
+            transform: "translate(-50%, -50%)",
+          }}
+          size={50}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      ) : (
+        <div id="members">
+          <h1 className="Event__page_title">Meet Our Members</h1>
+          <hr className=".Achievements_hr" />
+          <div className="members_content" ref={displayMembers}>
+            {Members.map((member, index) => {
               const color = randomColor();
               return (
-                <div className="member" key={index} style={{ width: "30%", minWidth: "300px", height: "500px", display: "flex", flexDirection: "column", background: color, margin: "20px", alignItems: "center", paddingTop: "20px" }}>
-                  <img src={member.memberImage} style={{ width: "40%", height: "40%", border: "1px solid black", borderRadius: "50%", minWidth: "200px", marginLeft: "auto", marginRight: "auto" }} />
-                  <h2 style={{ textAlign: "center", fontFamily: "'Helvetica', sans-serif", fontSize: "24px" }}>{member.memberName}</h2>
-                  <p style={{ textAlign: "center", fontFamily: "'Helvetica', sans-serif", fontSize: "22px" }}><strong>{member.memberRole}</strong></p>
-                  <div style={{ textAlign: "center", textWrap: "wrap" }}>{member.memberDescription}</div>
-
-                  <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", alignItems: "center" }}>
-                    <a href={member.linkedinLink} >
-                      <img src={linkedinwhite} style={{ width: "25px", height: "25px", marginRight: "10px" }} />
-                    </a>
-                    <a href={member.githubLink}>
-                      <img src={github} style={{ width: "20px", height: "20px", marginTop: "2px" }} />
-                    </a>
+                <div
+                  className="member"
+                  key={index}
+                  style={{
+                    width: "30%",
+                    minWidth: "300px",
+                    height: "450px",
+                    display: "flex",
+                    flexDirection: "column",
+                    background: color,
+                    margin: "20px",
+                    alignItems: "center",
+                    paddingTop: "20px",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                >
+                  <img
+                    src={`/Images/Members/${member.memberImage}`}
+                    style={{
+                      width: "30%",
+                      height: "40%",
+                      border: "1px solid black",
+                      borderRadius: "50%",
+                      minWidth: "200px",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  />
+                  <h2
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "roboto, sans-serif",
+                      fontSize: "24px",
+                    }}
+                  >
+                    {member.memberName}
+                  </h2>
+                  <p
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "roboto, sans-serif",
+                      fontSize: "22px",
+                    }}
+                  >
+                    <strong>{member.memberRole}</strong>
+                  </p>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      wordWrap: "break-word",
+                      overflowWrap: "break-word",
+                      maxWidth: "90%",
+                    }}
+                  >
+                    {member.memberDescription}
                   </div>
 
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: "20px",
+                      alignItems: "center",
+                    }}
+                  >
+                    <a href={member.linkedinLink}>
+                      <img
+                        src={linkedinwhite}
+                        style={{
+                          width: "25px",
+                          height: "25px",
+                          marginRight: "10px",
+                        }}
+                      />
+                    </a>
+                    <a href={member.githubLink}>
+                      <img
+                        src={github}
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          marginTop: "2px",
+                        }}
+                      />
+                    </a>
+                  </div>
                 </div>
               );
             })}
+          </div>
         </div>
-      </div>}
+      )}
     </Layout>
   );
 }

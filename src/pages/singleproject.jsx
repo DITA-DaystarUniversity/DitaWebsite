@@ -26,7 +26,7 @@ function single_project() {
         </div>
 
         <div className="project-img" id="project-img">
-          <img src={img} alt={name} />
+          <img src={`/Images/Projects/${img}`} alt={name} />
         </div>
       </div>
     </Layout>

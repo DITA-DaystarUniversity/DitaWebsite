@@ -6,6 +6,12 @@
   width: "100%";
   padding-left: 15px;
 }
+p,
+h1,
+h2,
+a {
+  font-family: "roboto", sans-serif;
+}
 /* .singleWriting
 {
   margin-top: 20px;
@@ -35,4 +41,20 @@
 a {
   margin-left: 40px;
   font-size: 23px;
+}
+@media screen and (max-width: 1200px) {
+  .singleWriting img {
+    width: 100px;
+    height: 100px;
+  }
+  .singleWriting {
+    height: 200px;
+    padding-left: 5%;
+    padding-right: 6%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .singleWriting_topic {
+    font-size: 24px;
+  }
 }

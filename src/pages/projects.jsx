@@ -8,9 +8,8 @@ function projects() {
   const displayProjects = useRef(null);
   const displayProject = useRef(null);
   const navigate = useNavigate();
-  const [Projects , setProjects] = useState([]);
+  const [Projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-
 
   function getProjects(i) {
     const name = Projects[i].projectName;
@@ -30,7 +29,6 @@ function projects() {
 
   document.addEventListener("click", (event) => {
     const clickedElement = event.target;
-    console.log("Text content:", clickedElement.id);
     showSingleProject(clickedElement.id);
   });
 
@@ -42,56 +40,105 @@ function projects() {
     });
   }
 
-
   function fetchJson() {
     fetch("http://localhost:3000/api/v1/projects")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // 
-        setProjects(data)  // Set the state
-        setLoading(false)
+        setProjects(data); // Set the state
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error); // Handle any errors
       });
   }
-  
-
 
   useEffect(() => {
     fetchJson();
-
   }, []);
 
   return (
     <Layout>
-      {loading ? <PropagateLoader
-        color="#02133e"
-        loading={loading}
-        cssOverride={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
-        size={50}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      /> :
-      <div id="projects" ref={displayProject}>
-        {/* Make a general css for this */}
-        <h1 className="Event__page_title">Explore Our Projects</h1>
-        <hr />
-        <div className="projects_content" ref={displayProjects}>
-          { Projects.map((project, index) => 
-            {
+      {loading ? (
+        <PropagateLoader
+          color="#02133e"
+          loading={loading}
+          cssOverride={{
+            position: "fixed",
+            top: "50%",
+            left: "45%",
+            transform: "translate(-50%, -50%)",
+          }}
+          size={50}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      ) : (
+        <div id="projects" ref={displayProject}>
+          {/* Make a general css for this */}
+          <h1 className="Event__page_title">Explore Our Projects</h1>
+          <hr />
+          <div className="projects_content" ref={displayProjects}>
+            {Projects.map((project, index) => {
               const { name, img, description, link, github } = project;
               const color = randomColor();
               return (
-                <div id={index} className="project" style={{ width: "500px", minWidth: "300px", height: "500px", display: "flex", flexDirection: "column", background: color, margin: "10px", alignItems: "center", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)", paddingTop: "20px", cursor: "pointer" }}>
-                  <h2 id={index} style={{ textAlign: "center", fontFamily: "'Helvetica', sans-serif", fontSize: "24px" }}>{project.projectName}</h2>
-                  <img id={index} src={project.projectImage} style={{ width: "70%", height: "70%", minWidth: "200px", marginLeft: "auto", marginRight: "auto" }} />
-                  <div id={index} style={{ textAlign: "center", textWrap: "wrap", marginTop: "20px" }}>{project.projectSmallDescription}</div>
+                <div
+                  id={index}
+                  className="project"
+                  style={{
+                    width: "500px",
+                    minWidth: "300px",
+                    height: "500px",
+                    display: "flex",
+                    flexDirection: "column",
+                    background: color,
+                    margin: "10px",
+                    alignItems: "center",
+                    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+                    paddingTop: "20px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <h2
+                    id={index}
+                    style={{
+                      textAlign: "center",
+                      fontFamily: "roboto, sans-serif",
+                      fontSize: "24px",
+                    }}
+                  >
+                    {project.projectName}
+                  </h2>
+                  <img
+                    id={index}
+                    src={`/Images/Projects/${project.projectImage}`}
+                    style={{
+                      width: "70%",
+                      height: "70%",
+                      minWidth: "200px",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  />
+                  <div
+                    id={index}
+                    style={{
+                      marginTop: "20px",
+                      textAlign: "center",
+                      textWrap: "wrap",
+                      wordWrap: "break-word",
+                      overflowWrap: "break-word",
+                      maxWidth: "90%",
+                    }}
+                  >
+                    {project.projectSmallDescription}
+                  </div>
                 </div>
               );
             })}
+          </div>
         </div>
-      </div>}
+      )}
     </Layout>
   );
 }

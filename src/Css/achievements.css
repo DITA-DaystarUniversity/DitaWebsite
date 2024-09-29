@@ -1,13 +1,17 @@
 #Achievements {
   /* margin-left: 5%;
   margin-right: 5%; */
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .Event__page_title {
   margin-top: 30px;
 }
+p,
+h1,
+h2 {
+  font-family: "roboto", sans-serif;
+}
 #Achievements h1 {
-  font-family: Inter;
   font-size: 50px;
   font-weight: 600;
   line-height: 89.56px;
@@ -30,8 +34,6 @@
 }
 .Achievements_content h2 {
   text-align: center;
-  font-size: 40px;
-  font-family: Inter;
   font-size: 48px;
   font-weight: 600;
   line-height: 58.09px;
@@ -63,8 +65,14 @@
   transform: scale(0.9);
 }
 @media screen and (max-width: 1200px) {
+  #Achievements h1 {
+    font-size: 40px;
+    margin: 0px;
+    text-align: center;
+  }
   #Achievements {
     margin: 0px;
+    margin-top: -20px;
   }
   .Achievements_hackathon_img {
     height: 200px;
@@ -72,6 +80,7 @@
   .Achievements_content div {
     margin-top: 20px;
     width: 200px;
+    margin-right: 30px;
   }
   .Achievements_content div h2 {
     font-size: 30px;
@@ -85,6 +94,7 @@
   }
   .Achievements_hr {
     margin: 0px;
+    margin-top: -20px;
     margin-left: 5%;
   }
   .Achievements_content {

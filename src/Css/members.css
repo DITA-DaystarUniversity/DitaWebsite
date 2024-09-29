@@ -4,7 +4,13 @@
   padding-left: 5%;
 }
 #members {
-  margin-top: 50px;
+  margin-top: 100px;
+}
+p,
+h1,
+h2,
+a {
+  font-family: "roboto", sans-serif;
 }
 
 .members_display {
@@ -22,7 +28,7 @@
 }
 
 .member {
-  font-family: "Helvetica";
+  font-family: "roboto", sans-serif;
 }
 .member h2,
 .member p,
@@ -43,7 +49,7 @@
     margin-top: 20px;
     display: flex;
     overflow-x: auto;
-    height: 600px;
+    height: 100%;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     scroll-padding: 0 24px;
@@ -54,11 +60,16 @@
     display: none;
   }
   #members {
-    margin-top: 0px;
+    margin-top: -30px;
+  }
+  .member p {
+    margin-top: -15px;
+  }
+  .member {
+    height: 300px;
   }
   .members_content {
     display: block;
-    /* flex-wrap: nowrap; */
     padding-left: 2%;
   }
 }

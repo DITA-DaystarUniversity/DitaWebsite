@@ -19,7 +19,6 @@ import dita_logo from "/public/ditaLogo-3d409f18.png";
 import { useState, useRef } from "react";
 import Homepage_slider from "/src/components/homepage_slider.jsx";
 
-
 function homePage() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -189,6 +188,8 @@ function homePage() {
             </div>
           </div>
 
+          <hr />
+          
           <div className="links">
             <a href="https://www.linkedin.com/company/dita-daystar-university">
               <img src={linkedin} />
@@ -200,6 +201,7 @@ function homePage() {
               <img src={instagram} />
             </a>
           </div>
+
 
           <p className="copyright">© {currentYear} | All Rights Reserved</p>
         </div>

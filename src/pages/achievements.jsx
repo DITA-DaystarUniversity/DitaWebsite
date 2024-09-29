@@ -8,9 +8,10 @@ import { Link } from "react-router-dom";
 function Achievements() {
   return (
     <Layout>
-      <h1 className="Event__page_title">Achievements</h1>
-      <hr className="Achievements_hr" />
       <div id="Achievements">
+        <h1 className="Event__page_title">Achievements</h1>
+        <hr className="Achievements_hr" />
+
         <div className="Achievements_content">
           <Link to="/projects">
             <div className="Acheivements_Project">

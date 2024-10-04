@@ -16,13 +16,11 @@ import instagram from "/src/assets/instagram_logo.png";
 import Homepage_layout from "/src/layout/homepage_layout.jsx";
 import { Link } from "react-router-dom";
 import dita_logo from "/public/ditaLogo-3d409f18.png";
-import { useState, useRef } from "react";
 import Homepage_slider from "/src/components/homepage_slider.jsx";
 
 function homePage() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const display_Leaders = useRef(null);
 
   return (
     <Homepage_layout>
@@ -83,7 +81,7 @@ function homePage() {
           <h1>Meet Our Team</h1>
           <p>Meet Our Team. Get to know the talented individuals behind DITA</p>
 
-          <div className="OurTeams" useRef={display_Leaders}>
+          <div className="OurTeams">
             <Homepage_slider />
           </div>
         </div>
@@ -118,7 +116,7 @@ function homePage() {
                 For any inquiries or collaborations, please reach out on our
                 email
               </p>
-              <a href="mailto:Dita@daystar.ac.ke">Dita@daystar.ac.ke</a>
+              <a href="mailto:Dita@daystar.ac.ke" className="Email">Dita@daystar.ac.ke</a>
             </div>
             <div>
               <img src={phone_icon}></img>

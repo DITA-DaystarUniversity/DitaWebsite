@@ -1,7 +1,6 @@
 #Events {
   display: flex;
   justify-content: space-between;
-  /* margin-left: 6%; */
   margin-right: 6%;
   flex-wrap: wrap;
   margin-top: 100px;
@@ -70,13 +69,13 @@ h2 {
 .events_details {
   width: 420px;
   padding-right: 20px;
-  padding-top: -30px;
+  padding-top: -40px;
   text-wrap: wrap;
 }
 .events_details h2 {
   width: 100%;
   margin-left: 250px;
-  margin-top: -110px;
+  margin-top: -150px;
   font-size: 30px;
 }
 .events_details div {
@@ -85,15 +84,14 @@ h2 {
   font-size: 15px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  min-width: 200px;
-  max-width: 200px;
+  max-width: 90%;
 }
 .events_details a {
   width: 100px;
   margin-left: 250px;
   font-size: 20px;
   text-decoration: none;
-  color: blue;
+  color: rgba(28, 57, 123, 0.66);
 }
 hr {
   border-width: 5px;
@@ -134,7 +132,6 @@ hr {
     scroll-padding: 0 24px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    width: 400px;
     align-items: self-start;
   }
   .Events_calender {
@@ -172,24 +169,20 @@ hr {
   .events_details {
     border: none;
     margin-left: 100px;
-    /* text-wrap: nowrap; */
   }
   .events_details h2 {
     margin: 0px;
-    /* margin-left: 10px; */
     margin-top: -70px;
-    /* text-wrap: nowrap; */
     width: 200px;
   }
   .events_details div {
     margin: 0px;
     font-size: 13px;
-    /* margin-left: 40px; */
+    min-width: 200px;
   }
   .events_details a {
     margin: 0px;
     font-size: 13px;
-    /* margin-left: 70px; */
   }
   #Events {
     padding: 0px;

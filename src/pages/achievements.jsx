@@ -9,7 +9,7 @@ function Achievements() {
   return (
     <Layout>
       <div id="Achievements">
-        <h1 className="Event__page_title">Achievements</h1>
+        <h1 className="Event__page_title" style={{ textAlign: "start" }}>Achievements</h1>
         <hr className="Achievements_hr" />
 
         <div className="Achievements_content">

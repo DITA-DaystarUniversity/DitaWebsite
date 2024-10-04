@@ -1,18 +1,13 @@
 import "/src/Css/events.css";
 import Layout from "/src/layout/homepage_layout.jsx";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calender from "/src/components/calender.jsx";
-import calender_icon from "/src/assets/calender_icon.png";
 import { useNavigate } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
 function events() {
-  const displayEvents = useRef(null);
-  const displaySingleEvent = useRef(null);
   const navigate = useNavigate();
   const [Events, setEvents] = useState([]);
-  const [month, setMonth] = useState(0);
-  const [daydate, setDaydate] = useState(0);
   const [loading, setLoading] = useState(true);
 
   // const displaybutton = useRef(null);
@@ -43,31 +38,38 @@ function events() {
   ];
 
   document.addEventListener("click", (event) => {
-    const clickedElement = event.target;
-    const element = String(clickedElement.id).split("Events")[1];
-    showSingleEvent(element);
+    const clickedElement = event.target; // or event.currentTarget
+    const parts = String(clickedElement.id).split("Events");
+    const element = parts.length > 1 ? parts[1] : null;
+    if(element !== null)
+      {
+        showSingleEvent(element);
+      }
   });
 
   function getEvents(i) {
-    const title = Events[i].eventName;
-    const start = Events[i].eventDate;
-    const description = Events[i].eventSmallDescription;
-    const link = Events[i].eventLink;
-    const img = Events[i].eventImage;
-    const details = Events[i].eventDetailedDescription;
-    const time = Events[i].eventTime;
-    const Eventlocation = Events[i].eventVenue;
-    const registration_details = Events[i].registrationDetail;
-    return {
-      title,
-      description,
-      link,
-      img,
-      details,
-      time,
-      Eventlocation,
-      registration_details,
-    };
+    if(Events !== null)
+      {
+        const title = Events[i].eventName;
+        const start = Events[i].eventDate;
+        const description = Events[i].eventSmallDescription;
+        const link = Events[i].eventLink;
+        const img = Events[i].eventImage;
+        const details = Events[i].eventDetailedDescription;
+        const time = Events[i].eventTime;
+        const Eventlocation = Events[i].eventVenue;
+        const registration_details = Events[i].registrationDetail;
+        return {
+          title,
+          description,
+          link,
+          img,
+          details,
+          time,
+          Eventlocation,
+          registration_details,
+        };
+      }
   }
 
   function showSingleEvent(i) {
@@ -96,8 +98,10 @@ function events() {
     });
   }
 
-  function fetchJson() {
-    fetch("http://localhost:3000/api/v1/events")
+
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/v1/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data); // Set the state
@@ -106,10 +110,6 @@ function events() {
       .catch((error) => {
         console.log(error); // Handle any errors
       });
-  }
-
-  useEffect(() => {
-    fetchJson();
   }, []);
 
   function eventDay(event) {
@@ -141,10 +141,10 @@ function events() {
           data-testid="loader"
         />
       ) : (
-        <div id="Events" ref={displaySingleEvent}>
+        <div id="Events" >
           <h1 className="Event__page_title">Events</h1>
           <hr />
-          <div className="Events_display" ref={displayEvents}>
+          <div className="Events_display" >
             {Events.map((event, index) => {
               const Edate = new Date(event.eventDate);
               const CurrentDate = new Date();
@@ -152,7 +152,7 @@ function events() {
                 return "";
               }
               return (
-                <div className="event" key={index}>
+                <div className="event" key={"Events" + index} id={`Events${index}`}>
                   <hr />
                   <div className="events_date">
                     <h2 style={{ margin: "0px" }}>{eventDay(event)}</h2>{" "}

@@ -25,6 +25,12 @@ a {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.2);
 }
+.single_event_img p
+{
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 90%;
+}
 .single_event_img img {
   width: 400px;
   height: 400px;
@@ -59,6 +65,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+.registration_details p
+{
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 90%;
 }
 .registration_details h3 div {
   margin-bottom: 20px;

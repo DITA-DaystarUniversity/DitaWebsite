@@ -27,7 +27,7 @@ function singleWriting() {
           fontSize: "18px",
           wordWrap: "break-word",
           overflowWrap: "break-word",
-          maxWidth: "90%",
+          maxWidth: "99%",
         }}
       >
         {description}

@@ -1,5 +1,5 @@
 import Layout from "/src/layout/homepage_layout.jsx";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "/src/Css/members.css";
 import github from "/src/assets/github_logo.png";
 import linkedinwhite from "/src/assets/linkedin-white.png";
@@ -7,7 +7,6 @@ import PropagateLoader from "react-spinners/PropagateLoader";
 function members() {
   const [number, setNumber] = useState(0);
   const [Members, setMembers] = useState([]);
-  const displayMembers = useRef(null);
   const [loading, setLoading] = useState(true);
 
   function randomColor() {
@@ -17,20 +16,17 @@ function members() {
     return `rgb(${red}, ${green}, ${blue})`;
   }
 
-  function fetchJson() {
-    fetch("http://localhost:3000/api/v1/members")
-      .then((response) => response.json())
-      .then((data) => {
-        setMembers(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
 
   useEffect(() => {
-    fetchJson();
+    fetch("http://localhost:3001/api/v1/members")
+    .then((response) => response.json())
+    .then((data) => {
+      setMembers(data);
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   return (
@@ -53,7 +49,7 @@ function members() {
         <div id="members">
           <h1 className="Event__page_title">Meet Our Members</h1>
           <hr className=".Achievements_hr" />
-          <div className="members_content" ref={displayMembers}>
+          <div className="members_content">
             {Members.map((member, index) => {
               const color = randomColor();
               return (

@@ -1,14 +1,10 @@
 import Layout from "/src/layout/homepage_layout.jsx";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "/src/Css/technical_writing.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
-import github from "/src/assets/github_logo.png";
-import linkedinwhite from "/src/assets/linkedin-white.png";
+
 function technicalWriting() {
-  const displayWriting = useRef(null);
-  const EventsPage = useRef(null);
-  const width = window.innerWidth;
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [Writing, setWriting] = useState([]);
@@ -24,8 +20,13 @@ function technicalWriting() {
   }
 
   document.addEventListener("click", (event) => {
-    const clickedElement = event.target;
-    showSingleWriting(clickedElement.id);
+    const clickedElement = event.target; 
+    const parts = String(clickedElement.id).split("Writing");
+    const element = parts.length > 1 ? parts[1] : null;
+    if(element !== null)
+      {
+        showSingleWriting(element);
+      }
   });
 
   async function showSingleWriting(i) {
@@ -42,7 +43,7 @@ function technicalWriting() {
   }
 
   function fetchJson() {
-    fetch("http://localhost:3000/api/v1/technicalWritings")
+    fetch("http://localhost:3001/api/v1/technicalWritings")
       .then((response) => response.json())
       .then((data) => {
         setWriting(data);
@@ -80,9 +81,8 @@ function technicalWriting() {
               Technical Writing
             </h1>
             <hr className=".Achievements_hr" />
-            <div className="technical_writing_content" ref={displayWriting}>
+            <div className="technical_writing_content">
               {Writing.map((writing, index) => {
-                console.log(writing.topicImage);
                 return (
                   <div
                     className="technical"
@@ -90,13 +90,14 @@ function technicalWriting() {
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(/Images/Writings/TopicImages/${writing.topicImage})`,
                       backgroundRepeat: "no-repeat",
                     }}
+                    key={"Writing" + index} id={`Writing${index}`}
                   >
                     <img src={`/Images/Writings/WriterImages/${writing.writerImage}`} />
                     <h2>{writing.writerName}</h2>
-                    <h2 class="topic">{writing.topic}</h2>
+                    <h2 className="topic">{writing.topic}</h2>
                     <p>{writing.blogTeaser}</p>
                     <div className="button_div">
-                      <button id={index}>Continue Reading</button>
+                      <button  id={`Writing${index}`}>Continue Reading</button>
                     </div>
                   </div>
                 );

@@ -1,23 +1,24 @@
 import Layout from "/src/layout/homepage_layout.jsx";
 import "/src/Css/projects.css";
-import React, { useRef, useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
 
 function projects() {
-  const displayProjects = useRef(null);
-  const displayProject = useRef(null);
   const navigate = useNavigate();
   const [Projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
   function getProjects(i) {
-    const name = Projects[i].projectName;
-    const img = Projects[i].projectImage;
-    const description = Projects[i].projectDetailedDescription;
-    const link = Projects[i].projectLink;
-    const github = Projects[i].projectGithub;
-    return { name, img, description, link, github };
+    if(Projects)
+      {
+        const name = Projects[i].projectName;
+        const img = Projects[i].projectImage;
+        const description = Projects[i].projectDetailedDescription;
+        const link = Projects[i].projectLink;
+        const github = Projects[i].projectGithub;
+        return { name, img, description, link, github };
+      }
   }
 
   function randomColor() {
@@ -28,32 +29,32 @@ function projects() {
   }
 
   document.addEventListener("click", (event) => {
-    const clickedElement = event.target;
-    showSingleProject(clickedElement.id);
+    const clickedElement = event.target; // or event.currentTarget
+    const parts = String(clickedElement.id).split("Project");
+    const element = parts.length > 1 ? parts[1] : null;
+    if(element !== null)
+      {
+        showSingleProject(element);
+      }
   });
 
   function showSingleProject(i) {
-    // console.log(i);
     const { name, img, description, link, github } = getProjects(i);
     navigate("/singleProject/", {
       state: { name, img, description, link, github },
     });
   }
 
-  function fetchJson() {
-    fetch("http://localhost:3000/api/v1/projects")
-      .then((response) => response.json())
-      .then((data) => {
-        setProjects(data); // Set the state
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error); // Handle any errors
-      });
-  }
-
   useEffect(() => {
-    fetchJson();
+    fetch("http://localhost:3001/api/v1/projects")
+    .then((response) => response.json())
+    .then((data) => {
+      setProjects(data); // Set the state
+      setLoading(false);
+    })
+    .catch((error) => {
+      console.log(error); // Handle any errors
+    });
   }, []);
 
   return (
@@ -73,17 +74,17 @@ function projects() {
           data-testid="loader"
         />
       ) : (
-        <div id="projects" ref={displayProject}>
+        <div id="projects">
           {/* Make a general css for this */}
           <h1 className="Event__page_title">Explore Our Projects</h1>
           <hr />
-          <div className="projects_content" ref={displayProjects}>
+          <div className="projects_content">
             {Projects.map((project, index) => {
               const { name, img, description, link, github } = project;
               const color = randomColor();
               return (
                 <div
-                  id={index}
+                key={"Project" + index} id={`Project${index}`}
                   className="project"
                   style={{
                     width: "500px",
@@ -100,7 +101,7 @@ function projects() {
                   }}
                 >
                   <h2
-                    id={index}
+                id={`Project${index}`}
                     style={{
                       textAlign: "center",
                       fontFamily: "roboto, sans-serif",
@@ -110,7 +111,7 @@ function projects() {
                     {project.projectName}
                   </h2>
                   <img
-                    id={index}
+                 id={`Project${index}`}
                     src={`/Images/Projects/${project.projectImage}`}
                     style={{
                       width: "70%",
@@ -121,7 +122,7 @@ function projects() {
                     }}
                   />
                   <div
-                    id={index}
+                id={`Project${index}`}
                     style={{
                       marginTop: "20px",
                       textAlign: "center",

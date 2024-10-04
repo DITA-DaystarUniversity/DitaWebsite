@@ -10,7 +10,7 @@ function display_leaders() {
   const [loading, setLoading] = useState(true);
 
   function fetchJson() {
-    fetch("http://localhost:3000/api/v1/ditaleaders")
+    fetch("http://localhost:3001/api/v1/ditaleaders")
       .then((response) => response.json())
       .then((data) => {
         setLeaders(data);

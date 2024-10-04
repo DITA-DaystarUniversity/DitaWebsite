@@ -39,7 +39,7 @@ a {
   width: 300px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .members_display {
     display: flex;
     flex-wrap: wrap;

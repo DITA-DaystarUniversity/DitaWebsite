@@ -9,7 +9,7 @@ function About_us() {
       <div id="about_us">
         <div className="about_content">
           <div className="about_us_text">
-            <h1 className="Event__page_title">About Us</h1>
+            <h1 className="Event__page_title" >About Us</h1>
             <p>
               DITA is first of all a community. We learn together and grow
               together. We strive for excellence as upcoming professionals.

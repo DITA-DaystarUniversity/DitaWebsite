@@ -49,7 +49,7 @@ function header() {
         </div>
       </div>
 
-      <div id="header_other">
+      {/* <div id="header_other">
         <button
           className="menu_btn"
           onClick={() => {
@@ -69,7 +69,7 @@ function header() {
         <Link to="/">
           <img src={dita_logo} width={100} className="dita_logo" />
         </Link>
-      </div>
+      </div> */}
 
       <div className="menu_div " id="menu">
         <Link to="/about">

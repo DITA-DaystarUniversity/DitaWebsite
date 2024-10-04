@@ -16,7 +16,12 @@ function other_pages() {
     <>
       <div id="header_other">
         <Link to="/">
-          <img src={dita_logo} width={100} className="dita_logo" />
+          <img
+            src={dita_logo}
+            width={100}
+            className="dita_logo"
+            style={{ marginLeft: "-60px" }}
+          />
         </Link>
         <button
           className="menu_btn"

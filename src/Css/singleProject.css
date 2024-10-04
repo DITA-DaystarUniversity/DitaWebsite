@@ -4,7 +4,13 @@
   margin: 0px;
   margin-left: 100px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
+}
+p,
+h1,
+h2,
+a {
+  font-family: "roboto", sans-serif;
 }
 .single_project {
   display: flex;
@@ -38,6 +44,9 @@
   margin-top: 20px;
   height: fit-content;
   width: fit-content;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 99%;
 }
 @media screen and (max-width: 1200px) {
   .single_project {
@@ -78,6 +87,7 @@
     font-size: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0px;
   }
   #project-content {
     width: 300px;
@@ -90,7 +100,13 @@
     font-size: 15px;
   }
   #project-img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    margin-top: 50px;
+  }
+  #project-description {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin-top: -10%;
   }
 }

@@ -2,7 +2,13 @@
   text-align: center;
   font-size: 60px;
   margin: 0px;
-  margin-top: 50px;
+  margin-top: 100px;
+}
+p,
+h1,
+h2,
+a {
+  font-family: "roboto", sans-serif;
 }
 .single_event {
   display: flex;
@@ -18,6 +24,12 @@
   padding: 40px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.2);
+}
+.single_event_img p
+{
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 90%;
 }
 .single_event_img img {
   width: 400px;
@@ -54,6 +66,12 @@
   flex-direction: column;
   align-items: start;
 }
+.registration_details p
+{
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 90%;
+}
 .registration_details h3 div {
   margin-bottom: 20px;
 }
@@ -80,13 +98,29 @@
   }
   .single_event_img h2 {
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 18px;
     text-align: center;
+  }
+  .single_event_img p {
+    font-size: 13px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 90%;
   }
   .Single_events_details {
     width: 100%;
     margin: 0px;
     margin-top: 20px;
     padding: 0px;
+  }
+  .event_title {
+    margin-top: 0px;
+    font-size: 30px;
+  }
+  .registration_details p {
+    font-size: 13px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 330px;
   }
 }

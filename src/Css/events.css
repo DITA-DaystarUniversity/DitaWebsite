@@ -1,12 +1,15 @@
 #Events {
   display: flex;
   justify-content: space-between;
-  /* margin-left: 6%; */
   margin-right: 6%;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 100px;
 }
-
+p,
+h1,
+h2 {
+  font-family: "roboto", sans-serif;
+}
 .Events_display {
   width: 52%;
   height: 700px;
@@ -36,6 +39,8 @@
   font-size: 50px;
   width: 88%;
   margin: 0px;
+  color: rgba(28, 57, 123, 0.66);
+  text-align: start;
 }
 
 .Event__page_title {
@@ -64,38 +69,37 @@
 .events_details {
   width: 420px;
   padding-right: 20px;
-  padding-top: -30px;
+  padding-top: -40px;
   text-wrap: wrap;
 }
 .events_details h2 {
   width: 100%;
   margin-left: 250px;
-  margin-top: -110px;
+  margin-top: -150px;
   font-size: 30px;
 }
 .events_details div {
   width: 350px;
   margin-left: 250px;
   font-size: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 90%;
 }
 .events_details a {
   width: 100px;
   margin-left: 250px;
   font-size: 20px;
   text-decoration: none;
-  color: blue;
+  color: rgba(28, 57, 123, 0.66);
 }
 hr {
   border-width: 5px;
   border: 2px solid rgba(29, 49, 94, 0.66);
   width: 88%;
 }
-.event p {
-  font-family: "Courier New", Courier, monospace;
-}
 
 .events_btn {
-  font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   margin-left: 6%;
   margin-right: 6%;
@@ -122,19 +126,21 @@ hr {
   .Events_display {
     display: flex;
     overflow-x: auto;
-    height: 450px;
+    height: 79vh;
     flex-wrap: wrap;
     scroll-snap-type: x mandatory;
     scroll-padding: 0 24px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-    width: 400px;
+    align-items: self-start;
   }
   .Events_calender {
     display: none;
   }
   .event {
     width: 300px;
+    height: 150px;
+    margin: 10px;
   }
   .event div {
     width: 50px;
@@ -161,23 +167,22 @@ hr {
   }
 
   .events_details {
-    width: 100px;
     border: none;
+    margin-left: 100px;
   }
   .events_details h2 {
     margin: 0px;
-    margin-left: 70px;
     margin-top: -70px;
+    width: 200px;
   }
   .events_details div {
     margin: 0px;
     font-size: 13px;
-    margin-left: 40px;
+    min-width: 200px;
   }
   .events_details a {
     margin: 0px;
     font-size: 13px;
-    margin-left: 70px;
   }
   #Events {
     padding: 0px;

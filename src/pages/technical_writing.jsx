@@ -43,7 +43,7 @@ function technicalWriting() {
   }
 
   function fetchJson() {
-    fetch("http://localhost:3001/api/v1/technicalWritings")
+    fetch("https://api.dita.co.ke/api/v1/technicalWritings")
       .then((response) => response.json())
       .then((data) => {
         setWriting(data);

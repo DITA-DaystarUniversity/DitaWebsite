@@ -101,7 +101,7 @@ function events() {
 
 
   useEffect(() => {
-    fetch("http://62.169.16.219:89/api/v1/events")
+    fetch("https://api.dita.co.ke/api/v1/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data); // Set the state

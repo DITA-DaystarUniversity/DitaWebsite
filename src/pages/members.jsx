@@ -18,7 +18,7 @@ function members() {
 
 
   useEffect(() => {
-    fetch("http://62.169.16.219:89/api/v1/members")
+    fetch("https://api.dita.co.ke/api/v1/members")
     .then((response) => response.json())
     .then((data) => {
       setMembers(data);

@@ -4,6 +4,8 @@ import "/src/Css/members.css";
 import github from "/src/assets/github_logo.png";
 import linkedinwhite from "/src/assets/linkedin-white.png";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 function members() {
   const [number, setNumber] = useState(0);
   const [Members, setMembers] = useState([]);
@@ -19,14 +21,15 @@ function members() {
 
   useEffect(() => {
     fetch("https://api.dita.co.ke/api/v1/members")
-    .then((response) => response.json())
-    .then((data) => {
-      setMembers(data);
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        setMembers(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
   }, []);
 
   return (
@@ -50,7 +53,26 @@ function members() {
           <h1 className="Event__page_title">Meet Our Members</h1>
           <hr className=".Achievements_hr" />
           <div className="members_content">
-            {Members.map((member, index) => {
+            {Members.length === 0 ? (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  width: '94%',
+                  height: '80vh'
+                }}
+              >
+                <DotLottieReact
+                  src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                  loop
+                  autoplay
+                  style={{ width: "700px", height: "700px" }}
+                />
+                <p style={{ fontSize: "30px" }}>No Members to display</p>
+              </div>
+            ) : (Members.map((member, index) => {
               const color = randomColor();
               return (
                 <div
@@ -142,7 +164,7 @@ function members() {
                   </div>
                 </div>
               );
-            })}
+            }))}
           </div>
         </div>
       )}

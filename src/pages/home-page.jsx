@@ -89,20 +89,14 @@ function homePage() {
         <div className="home_mission">
           <h1>Dita's Mission</h1>
           <p>
-            EmailFor any inquiries or collaborations, please fill out the form
-            below.hello@relume.ioPhoneFeel free to give us a call or send us a
-            message.+1 (555) 000-0000OfficeVisit our office during business
-            hours.123 Sample St, Sydney NSW 2000 AU
+            Empowering Daystar Community and Beyond with enough Information Technology
           </p>
         </div>
 
         <div className="home_vision">
           <h1>Dita's Vision</h1>
           <p>
-            EmailFor any inquiries or collaborations, please fill out the form
-            below. hello@relume.ioPhoneFeel free to give us a call or send us a
-            message. +1 (555) 000-0000OfficeVisit our office during business
-            hours.123 Sample St, Sydney NSW 2000 AU
+            Vision: Delivering innovative and value-driven ICT products and services with excellence.
           </p>
         </div>
 
@@ -177,7 +171,7 @@ function homePage() {
             <div>
               <h2>Contact Us</h2>
               <p>
-                Gmail: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
+                Outlook: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
               </p>
               Location:
               <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">
@@ -187,7 +181,7 @@ function homePage() {
           </div>
 
           <hr />
-          
+
           <div className="links">
             <a href="https://www.linkedin.com/company/dita-daystar-university">
               <img src={linkedin} />
@@ -195,7 +189,7 @@ function homePage() {
             <a href="https://github.com/dita-daystaruni">
               <img src={github} />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/dita.daystar/">
               <img src={instagram} />
             </a>
           </div>

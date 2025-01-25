@@ -3,6 +3,7 @@ import linkedin from "/src/assets/linkedin.png";
 import github from "/src/assets/github_logo.png";
 import linkedinwhite from "/src/assets/linkedin-white.png";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 function display_leaders() {
   const [number, setNumber] = useState(0);
   const displayLeaders = useRef(null);
@@ -26,28 +27,53 @@ function display_leaders() {
   }, []);
 
   return (
-    <div ref={displayLeaders} className="OurTeams">
-      {Leaders.map((leader, index) => {
-        return (
-          <div className="leader" key={index}>
-            <img src={`/Images/Dita-Leaders/${leader.leaderImage}`} />
-            <h2>{leader.leaderName}</h2>
-            <p>{leader.leaderRole}</p>
-            <p>{leader.leaderDescription}</p>
-            <div className="Links">
-              <a href={leader.linkedinLink}>
-                <img
-                  src={linkedinwhite}
-                  style={{ width: "25px", height: "25px" }}
-                />
-              </a>
-              <a href={leader.githubLink}>
-                <img src={github} style={{ width: "25px", height: "25px" }} />
-              </a>
-            </div>
-          </div>
-        );
-      })}
+    <div ref={displayLeaders} className="OurTeams" style={{ width: '100%' }}>
+      {loading ? (
+        <div className="loader" style={{ display: "flex", width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+          <PropagateLoader color="rgb(0, 0, 0)" size={20} />
+        </div>
+      ) : (Leaders.length > 0 ? (
+        (
+          Leaders.map((leader, index) => {
+            return (
+              <div className="leader" key={index}>
+                <img src={`/Images/Dita-Leaders/${leader.leaderImage}`} />
+                <h2>{leader.leaderName}</h2>
+                <p>{leader.leaderRole}</p>
+                <p>{leader.leaderDescription}</p>
+                <div className="Links">
+                  <a href={leader.linkedinLink}>
+                    <img
+                      src={linkedinwhite}
+                      style={{ width: "25px", height: "25px" }}
+                    />
+                  </a>
+                  <a href={leader.githubLink}>
+                    <img src={github} style={{ width: "25px", height: "25px" }} />
+                  </a>
+                </div>
+              </div>
+            );
+          }))
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            width: '94%',
+          }}
+        >
+          <DotLottieReact
+            src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+            loop
+            autoplay
+            style={{ width: "300px", height: "300px" }}
+          />
+          <p style={{ fontSize: "30px" }}>No Leaders to display</p>
+        </div>
+      ))}
     </div>
   );
 }

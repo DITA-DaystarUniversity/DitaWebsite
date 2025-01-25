@@ -46,6 +46,7 @@ function projects() {
 
   useEffect(() => {
     fetch("https://api.dita.co.ke/api/v1/projects")
+
       .then((response) => response.json())
       .then((data) => {
         setProjects(data); // Set the state

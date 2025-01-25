@@ -16,14 +16,8 @@ COPY . .
 # Step 6: Build the application for production
 RUN npm run build
 
-# Step 7: Use a lightweight web server for the production build
-FROM nginx:alpine AS production
+# Step 8: Expose the port
+EXPOSE 5173
 
-# Step 8: Copy the build output to Nginx's HTML directory
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Step 9: Expose the port
-EXPOSE 80
-
-# Step 10: Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Step 9: Start server
+CMD ["npm", "run", "dev"]

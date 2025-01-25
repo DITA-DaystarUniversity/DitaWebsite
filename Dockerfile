@@ -20,4 +20,5 @@ RUN npm run build
 EXPOSE 5173
 
 # Step 9: Start server
-CMD ["npm", "run", "dev"]
+# Change the CMD to explicitly bind to all interfaces
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]

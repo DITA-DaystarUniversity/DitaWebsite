@@ -14,7 +14,13 @@ RUN npm install
 COPY . .
 
 # Step 6: Create a folder called images with subfolders
-RUN mkdir -p /app/Images/{Events,Members,Projects,Writings/{TopicImages,WriterImages},Dita-Leaders}
+RUN mkdir -p /app/Images/Events \
+    /app/Images/Members \
+    /app/Images/Projects \
+    /app/Images/Writings/TopicImages \
+    /app/Images/Writings/WriterImages \
+    /app/Images/Dita-Leaders
+
 
 # Step 7: Build the application for production
 RUN npm run build

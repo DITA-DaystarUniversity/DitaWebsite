@@ -13,12 +13,8 @@ RUN npm install
 # Step 5: Copy the rest of the application source code
 COPY . .
 
-# Step 6: Build the application for production
-RUN npm run build
-
 # Step 8: Expose the port
 EXPOSE 5173
 
 # Step 9: Start server
-# Change the CMD to explicitly bind to all interfaces
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD ["npm", "run", "dev", "--", "--host"]

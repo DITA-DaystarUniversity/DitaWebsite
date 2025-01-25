@@ -13,10 +13,13 @@ RUN npm install
 # Step 5: Copy the rest of the application source code
 COPY . .
 
-# Step 6: Build the application for production
+# Step 6: Create a folder called images with subfolders
+RUN mkdir -p /app/Images/{Events,Members,Projects,Writings/{TopicImages,WriterImages},Dita-Leaders}
+
+# Step 7: Build the application for production
 RUN npm run build
 
-# Step 7: Expose the port
+# Step 8: Expose the port
 EXPOSE 5173
 
 # Step 8: Start server with proper host binding

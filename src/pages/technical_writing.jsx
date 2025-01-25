@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "/src/Css/technical_writing.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function technicalWriting() {
   const navigate = useNavigate();
@@ -20,13 +21,12 @@ function technicalWriting() {
   }
 
   document.addEventListener("click", (event) => {
-    const clickedElement = event.target; 
+    const clickedElement = event.target;
     const parts = String(clickedElement.id).split("Writing");
     const element = parts.length > 1 ? parts[1] : null;
-    if(element !== null)
-      {
-        showSingleWriting(element);
-      }
+    if (element !== null) {
+      showSingleWriting(element);
+    }
   });
 
   async function showSingleWriting(i) {
@@ -82,26 +82,47 @@ function technicalWriting() {
             </h1>
             <hr className=".Achievements_hr" />
             <div className="technical_writing_content">
-              {Writing.map((writing, index) => {
-                return (
-                  <div
-                    className="technical"
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(/Images/Writings/TopicImages/${writing.topicImage})`,
-                      backgroundRepeat: "no-repeat",
-                    }}
-                    key={"Writing" + index} id={`Writing${index}`}
-                  >
-                    <img src={`/Images/Writings/WriterImages/${writing.writerImage}`} />
-                    <h2>{writing.writerName}</h2>
-                    <h2 className="topic">{writing.topic}</h2>
-                    <p>{writing.blogTeaser}</p>
-                    <div className="button_div">
-                      <button  id={`Writing${index}`}>Continue Reading</button>
+              {Writing.length === 0 ? (
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    width: '94%',
+                    height: '80vh'
+                  }}
+                >
+                  <DotLottieReact
+                    src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                    loop
+                    autoplay
+                    style={{ width: "700px", height: "700px" }}
+                  />
+                  <p style={{ fontSize: "30px" }}>No writings to display</p>
+                </div>
+              ) : (
+                Writing.map((writing, index) => {
+                  return (
+                    <div
+                      className="technical"
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(/Images/Writings/TopicImages/${writing.topicImage})`,
+                        backgroundRepeat: "no-repeat",
+                      }}
+                      key={"Writing" + index} id={`Writing${index}`}
+                    >
+                      <img src={`/Images/Writings/WriterImages/${writing.writerImage}`} />
+                      <h2>{writing.writerName}</h2>
+                      <h2 className="topic">{writing.topic}</h2>
+                      <p>{writing.blogTeaser}</p>
+                      <div className="button_div">
+                        <button id={`Writing${index}`}>Continue Reading</button>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )}
             </div>
           </div>
         )}

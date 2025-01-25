@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Calender from "/src/components/calender.jsx";
 import { useNavigate } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function events() {
   const navigate = useNavigate();
@@ -41,35 +42,33 @@ function events() {
     const clickedElement = event.target; // or event.currentTarget
     const parts = String(clickedElement.id).split("Events");
     const element = parts.length > 1 ? parts[1] : null;
-    if(element !== null)
-      {
-        showSingleEvent(element);
-      }
+    if (element !== null) {
+      showSingleEvent(element);
+    }
   });
 
   function getEvents(i) {
-    if(Events !== null)
-      {
-        const title = Events[i].eventName;
-        const start = Events[i].eventDate;
-        const description = Events[i].eventSmallDescription;
-        const link = Events[i].eventLink;
-        const img = Events[i].eventImage;
-        const details = Events[i].eventDetailedDescription;
-        const time = Events[i].eventTime;
-        const Eventlocation = Events[i].eventVenue;
-        const registration_details = Events[i].registrationDetail;
-        return {
-          title,
-          description,
-          link,
-          img,
-          details,
-          time,
-          Eventlocation,
-          registration_details,
-        };
-      }
+    if (Events !== null) {
+      const title = Events[i].eventName;
+      const start = Events[i].eventDate;
+      const description = Events[i].eventSmallDescription;
+      const link = Events[i].eventLink;
+      const img = Events[i].eventImage;
+      const details = Events[i].eventDetailedDescription;
+      const time = Events[i].eventTime;
+      const Eventlocation = Events[i].eventVenue;
+      const registration_details = Events[i].registrationDetail;
+      return {
+        title,
+        description,
+        link,
+        img,
+        details,
+        time,
+        Eventlocation,
+        registration_details,
+      };
+    }
   }
 
   function showSingleEvent(i) {
@@ -144,30 +143,40 @@ function events() {
         <div id="Events" >
           <h1 className="Event__page_title">Events</h1>
           <hr />
-          <div className="Events_display" >
-            {Events.map((event, index) => {
-              const Edate = new Date(event.eventDate);
-              const CurrentDate = new Date();
-              if (CurrentDate.getTime() > Edate.getTime()) {
-                return "";
-              }
-              return (
-                <div className="event" key={"Events" + index} id={`Events${index}`}>
-                  <hr />
-                  <div className="events_date">
-                    <h2 style={{ margin: "0px" }}>{eventDay(event)}</h2>{" "}
-                    {/* Fixed inline style */}
-                    <h2>{eventMonth(event)}</h2>
+          <div className="Events_display">
+            {Events.length === 0 ? (
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <DotLottieReact
+                  src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                  loop
+                  autoplay
+                  style={{ width: '500px', height: '500px' }}
+                />
+                <p style={{ fontSize: '30px' }}>No events to display</p>
+              </div>
+            ) : (
+              Events.map((event, index) => {
+                const Edate = new Date(event.eventDate);
+                const CurrentDate = new Date();
+                if (CurrentDate.getTime() > Edate.getTime()) {
+                  return null; // Skip past events
+                }
+                return (
+                  <div className="event" key={`Events${index}`} id={`Events${index}`}>
+                    <hr />
+                    <div className="events_date">
+                      <h2 style={{ margin: "0px" }}>{eventDay(event)}</h2>
+                      <h2>{eventMonth(event)}</h2>
+                    </div>
+                    <div className="events_details">
+                      <h2>{event.eventName}</h2>
+                      <div>{event.eventSmallDescription}</div>
+                      <a href="#" id={`Events${index}`}>Register</a> {/* Placeholder href */}
+                    </div>
                   </div>
-                  <div className="events_details">
-                    <h2>{event.eventName}</h2>
-                    <div>{event.eventSmallDescription}</div>
-                    <a id={`Events${index}`}>Register</a>{" "}
-                    {/* Updated to use href="#" */}
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
 
           <div className="Events_calender">

@@ -1,8 +1,9 @@
 import Layout from "/src/layout/homepage_layout.jsx";
 import "/src/Css/projects.css";
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function projects() {
   const navigate = useNavigate();
@@ -10,15 +11,14 @@ function projects() {
   const [loading, setLoading] = useState(true);
 
   function getProjects(i) {
-    if(Projects)
-      {
-        const name = Projects[i].projectName;
-        const img = Projects[i].projectImage;
-        const description = Projects[i].projectDetailedDescription;
-        const link = Projects[i].projectLink;
-        const github = Projects[i].projectGithub;
-        return { name, img, description, link, github };
-      }
+    if (Projects) {
+      const name = Projects[i].projectName;
+      const img = Projects[i].projectImage;
+      const description = Projects[i].projectDetailedDescription;
+      const link = Projects[i].projectLink;
+      const github = Projects[i].projectGithub;
+      return { name, img, description, link, github };
+    }
   }
 
   function randomColor() {
@@ -32,10 +32,9 @@ function projects() {
     const clickedElement = event.target; // or event.currentTarget
     const parts = String(clickedElement.id).split("Project");
     const element = parts.length > 1 ? parts[1] : null;
-    if(element !== null)
-      {
-        showSingleProject(element);
-      }
+    if (element !== null) {
+      showSingleProject(element);
+    }
   });
 
   function showSingleProject(i) {
@@ -47,14 +46,14 @@ function projects() {
 
   useEffect(() => {
     fetch("http://localhost:3001/api/v1/projects")
-    .then((response) => response.json())
-    .then((data) => {
-      setProjects(data); // Set the state
-      setLoading(false);
-    })
-    .catch((error) => {
-      console.log(error); // Handle any errors
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data); // Set the state
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error); // Handle any errors
+      });
   }, []);
 
   return (
@@ -79,64 +78,81 @@ function projects() {
           <h1 className="Event__page_title">Explore Our Projects</h1>
           <hr />
           <div className="projects_content">
-            {Projects.map((project, index) => {
-              const { name, img, description, link, github } = project;
-              const color = randomColor();
-              return (
-                <div
-                key={"Project" + index} id={`Project${index}`}
-                  className="project"
-                  style={{
-                    width: "500px",
-                    minWidth: "300px",
-                    height: "500px",
-                    display: "flex",
-                    flexDirection: "column",
-                    background: color,
-                    margin: "10px",
-                    alignItems: "center",
-                    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-                    paddingTop: "20px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <h2
-                id={`Project${index}`}
-                    style={{
-                      textAlign: "center",
-                      fontFamily: "roboto, sans-serif",
-                      fontSize: "24px",
-                    }}
-                  >
-                    {project.projectName}
-                  </h2>
-                  <img
-                 id={`Project${index}`}
-                    src={`/Images/Projects/${project.projectImage}`}
-                    style={{
-                      width: "70%",
-                      height: "70%",
-                      minWidth: "200px",
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                    }}
-                  />
+            {Projects.length === 0 ? (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  width: '94%',
+                  height: '80vh'
+                }}
+              >
+                <DotLottieReact
+                  src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                  loop
+                  autoplay
+                  style={{ width: "700px", height: "700px" }}
+                />
+                <p style={{ fontSize: "30px" }}>No projects to display</p>
+              </div>
+            ) : (
+              Projects.map((project, index) => {
+                const color = randomColor(); // Ensure `randomColor` is defined
+                return (
                   <div
-                id={`Project${index}`}
+                    key={`Project${index}`}
+                    className="project"
                     style={{
-                      marginTop: "20px",
-                      textAlign: "center",
-                      textWrap: "wrap",
-                      wordWrap: "break-word",
-                      overflowWrap: "break-word",
-                      maxWidth: "90%",
+                      width: "500px",
+                      minWidth: "300px",
+                      height: "500px",
+                      display: "flex",
+                      flexDirection: "column",
+                      background: color,
+                      margin: "10px",
+                      alignItems: "center",
+                      boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+                      paddingTop: "20px",
+                      cursor: "pointer",
                     }}
                   >
-                    {project.projectSmallDescription}
+                    <h2
+                      style={{
+                        textAlign: "center",
+                        fontFamily: "Roboto, sans-serif",
+                        fontSize: "24px",
+                      }}
+                    >
+                      {project.projectName}
+                    </h2>
+                    <img
+                      src={`/Images/Projects/${project.projectImage}`}
+                      alt={`${project.projectName}`}
+                      style={{
+                        width: "70%",
+                        height: "70%",
+                        minWidth: "200px",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                      }}
+                    />
+                    <div
+                      style={{
+                        marginTop: "20px",
+                        textAlign: "center",
+                        wordWrap: "break-word",
+                        overflowWrap: "break-word",
+                        maxWidth: "90%",
+                      }}
+                    >
+                      {project.projectSmallDescription}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
       )}

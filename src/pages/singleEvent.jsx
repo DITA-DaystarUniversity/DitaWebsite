@@ -21,7 +21,7 @@ function Single_event() {
         <div className="single_event_img">
           <img src={`/Images/Events/${img}`} alt={title} />
           <h2>Event Overview</h2>
-          <hr />
+          <hr style={{ width: "100%" }} />
           <p>{details}</p>
         </div>
         <div className="Single_events_details">
@@ -33,8 +33,8 @@ function Single_event() {
           </div>
           <div className="registration_details">
             <h3>Registration Details</h3>
-            <div style={{ marginBottom: "20px" }}>
-              <p>{registration_details}</p>
+            <div style={{ marginBottom: "20px" , display: "flex", flexWrap: "wrap" }}>
+            {registration_details}
             </div>
             <a href={link}>Register Here</a>
           </div>

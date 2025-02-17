@@ -9,7 +9,7 @@ import projects_img from "/src/assets/project_icon.png";
 import members_img from "/src/assets/people_icon.png";
 import achievements_img from "/src/assets/medal_icon.png";
 import technical_writing_img from "/src/assets/writing_icon.png";
-// import Links from
+
 
 function header() {
   return (
@@ -49,27 +49,6 @@ function header() {
         </div>
       </div>
 
-      {/* <div id="header_other">
-        <button
-          className="menu_btn"
-          onClick={() => {
-            // document.querySelector(".menu_div").style.display = "flex"
-
-            if (document.querySelector(".menu_div").style.display === "none") {
-              document.querySelector(".menu_div").style.display = "flex";
-              document.querySelector(".menu_img").src = cancel;
-            } else {
-              document.querySelector(".menu_div").style.display = "none";
-              document.querySelector(".menu_img").src = menu;
-            }
-          }}
-        >
-          <img src={menu} className="menu_img" />
-        </button>
-        <Link to="/">
-          <img src={dita_logo} width={100} className="dita_logo" />
-        </Link>
-      </div> */}
 
       <div className="menu_div " id="menu">
         <Link to="/about">

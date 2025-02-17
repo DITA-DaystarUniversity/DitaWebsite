@@ -30,7 +30,9 @@ function projects() {
 
   document.addEventListener("click", (event) => {
     const clickedElement = event.target; // or event.currentTarget
+    console.log(clickedElement);
     const parts = String(clickedElement.id).split("Project");
+    console.log(parts);
     const element = parts.length > 1 ? parts[1] : null;
     if (element !== null) {
       showSingleProject(element);
@@ -104,6 +106,7 @@ function projects() {
                 return (
                   <div
                     key={`Project${index}`}
+                    id={`Project${index}`}
                     className="project"
                     style={{
                       width: "500px",

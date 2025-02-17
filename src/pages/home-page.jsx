@@ -159,7 +159,7 @@ function homePage() {
               </Link>
             </div>
 
-            <div>
+            <div className="related_links">
               <h2>Related Links</h2>
               <p>
                 <a href="https://elearning.daystar.ac.ke/">E-Learning</a>
@@ -180,7 +180,7 @@ function homePage() {
             </div>
           </div>
 
-          <hr />
+          <hr className="footer_hr" />
 
           <div className="links">
             <a href="https://www.linkedin.com/company/dita-daystar-university">

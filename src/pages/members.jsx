@@ -20,7 +20,7 @@ function members() {
 
 
   useEffect(() => {
-    fetch("https://api.dita.co.ke/api/v1/members")
+    fetch("http://localhost:3001/api/v1/members")
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);
@@ -79,7 +79,7 @@ function members() {
                   className="member"
                   key={index}
                   style={{
-                    width: "30%",
+                    width: "450px",
                     minWidth: "300px",
                     height: "450px",
                     display: "flex",
@@ -88,8 +88,6 @@ function members() {
                     margin: "20px",
                     alignItems: "center",
                     paddingTop: "20px",
-                    marginLeft: "auto",
-                    marginRight: "auto",
                   }}
                 >
                   <img

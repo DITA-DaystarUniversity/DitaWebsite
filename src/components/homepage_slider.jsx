@@ -36,9 +36,10 @@ function display_leaders() {
       ) : (Leaders.length > 0 ? (
         (
           Leaders.map((leader, index) => {
+            console.log(leader.leaderImage)
             return (
               <div className="leader" key={index}>
-                <img src={leader.leaderImage} />
+                <img src={leader.leaderImage} alt={`${leader.leaderName}'s image`} />
                 <h2>{leader.leaderName}</h2>
                 <p>{leader.leaderRole}</p>
                 <p>{leader.leaderDescription}</p>

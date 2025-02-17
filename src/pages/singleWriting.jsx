@@ -12,11 +12,11 @@ function singleWriting() {
       <div
         className="singleWriting"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url(/Images/Writings/TopicImages/${topicimage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url(${topicimage})`,
           backgroundRepeat: "no-repeat",
         }}
       >
-        <img src={`/Images/Writings/WriterImages/${img}`} alt={name} />
+        <img src={img} alt={name} />
         <h2>{name}</h2>
       </div>
       <hr style={{ width: "98%" }} />

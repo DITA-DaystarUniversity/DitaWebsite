@@ -24,6 +24,7 @@ function members() {
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);
+        console.log(data)
         setLoading(false);
       })
       .catch((error) => {
@@ -91,7 +92,7 @@ function members() {
                   }}
                 >
                   <img
-                    src={`/Images/Members/${member.memberImage}`}
+                    src={member.memberImage}
                     style={{
                       width: "30%",
                       height: "40%",

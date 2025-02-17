@@ -104,6 +104,7 @@ function events() {
       .then((response) => response.json())
       .then((data) => {
         setEvents(data); // Set the state
+        console.log(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -126,21 +127,14 @@ function events() {
   return (
     <Layout>
       {loading ? (
-        <PropagateLoader
-          color="#02133e"
-          loading={loading}
-          cssOverride={{
-            position: "fixed",
-            top: "50%",
-            left: "45%",
-            transform: "translate(-50%, -50%)",
-          }}
-          size={50}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+        <PropagateLoader color="#02133e" loading={loading} cssOverride={{
+          position: "fixed",
+          top: "50%",
+          left: "45%",
+          transform: "translate(-50%, -50%)",
+        }} size={50} aria-label="Loading Spinner" />
       ) : (
-        <div id="Events" >
+        <div id="Events">
           <h1 className="Event__page_title">Events</h1>
           <hr />
           <div className="Events_display">
@@ -155,30 +149,25 @@ function events() {
                 <p style={{ fontSize: '30px' }}>No events to display</p>
               </div>
             ) : (
-              Events.map((event, index) => {
-                const Edate = new Date(event.eventDate);
-                const CurrentDate = new Date();
-                if (CurrentDate.getTime() > Edate.getTime()) {
-                  return null; // Skip past events
-                }
-                return (
-                  <div className="event" key={`Events${index}`} id={`Events${index}`}>
-                    <hr />
-                    <div className="events_date">
-                      <h2 style={{ margin: "0px" }}>{eventDay(event)}</h2>
-                      <h2>{eventMonth(event)}</h2>
-                    </div>
-                    <div className="events_details">
-                      <h2>{event.eventName}</h2>
-                      <div>{event.eventSmallDescription}</div>
-                      <a href="#" id={`Events${index}`}>Register</a> {/* Placeholder href */}
-                    </div>
+              Events.map((event, index) => (
+                <div className="event" key={`Events${index}`} id={`Events${index}`}>
+                  <hr />
+                  <div className="events_date">
+                    <h2 style={{ margin: "0px" }}>{eventDay(event)}</h2>
+                    <h2>{eventMonth(event)}</h2>
                   </div>
-                );
-              })
+                  {/* <hr className="events_hr" /> */}
+                  <div className="events_details">
+                    <h2>{event.eventName}</h2>
+                    <div>{event.eventSmallDescription}</div>
+                    <a href={event.registrationLink} target="_blank" rel="noopener noreferrer" id={`Events${index}`}>
+                      Register
+                    </a>
+                  </div>
+                </div>
+              ))
             )}
           </div>
-
           <div className="Events_calender">
             <Calender events={Events} />
           </div>
@@ -186,6 +175,7 @@ function events() {
       )}
     </Layout>
   );
+  
 }
 
 export default events;

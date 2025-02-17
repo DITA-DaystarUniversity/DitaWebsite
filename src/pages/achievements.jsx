@@ -10,7 +10,7 @@ function Achievements() {
     <Layout>
       <div id="Achievements">
         <h1 className="Event__page_title" style={{ textAlign: "start" }}>Achievements</h1>
-        <hr className="Achievements_hr" />
+        <hr />
 
         <div className="Achievements_content">
           <Link to="/projects">

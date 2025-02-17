@@ -1,11 +1,8 @@
 #home_page {
   padding-left: 0px;
   padding-right: 0px;
-  margin-top: 150px;
-  width: 101%;
-  margin-left: -0.5%;
-  margin-right: -0.5%;
-  margin-bottom: -0.5%;
+  margin-top: 50px;
+  width: 100vw;
 }
 .home_about {
   display: flex;
@@ -358,6 +355,13 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
+
+.related_links a
+{
+  margin: 0px;
+}
+
 
 @media screen and (max-width: 1200px) {
   .contact_details a {

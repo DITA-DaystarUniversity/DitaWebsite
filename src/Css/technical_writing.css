@@ -8,6 +8,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
 }
 p,
 h1,
@@ -15,9 +18,7 @@ h2,
 a {
   font-family: "roboto", sans-serif;
 }
-#technical_writing {
-  margin-top: 100px;
-}
+
 .technical_writing_content button {
   margin-top: 50px;
   font-size: 20px;
@@ -33,9 +34,7 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-#technical_writing {
-  margin-top: 100px;
-}
+
 .technical {
   width: 43%;
   min-width: 300px;

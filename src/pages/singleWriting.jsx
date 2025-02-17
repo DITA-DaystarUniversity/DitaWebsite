@@ -37,3 +37,4 @@ function singleWriting() {
 }
 
 export default singleWriting;
+

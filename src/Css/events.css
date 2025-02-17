@@ -1,9 +1,11 @@
 #Events {
   display: flex;
   justify-content: space-between;
-  margin-right: 6%;
+  /* margin-right: 6%; */
   flex-wrap: wrap;
-  margin-top: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 p,
 h1,
@@ -11,7 +13,7 @@ h2 {
   font-family: "roboto", sans-serif;
 }
 .Events_display {
-  width: 52%;
+  width: 50%;
   height: 700px;
   overflow-y: auto;
   white-space: nowrap;
@@ -113,6 +115,15 @@ hr {
   background-color: black;
   color: white;
 }
+
+.events_hr {
+  border: none; /* Remove default horizontal border */
+  border-left: 1px solid rgba(0, 0, 0, 1); /* Create a vertical border */
+  height: 50px; /* Adjust height as needed */
+  width: 1px; /* Keep it thin */
+}
+
+
 
 @media screen and (max-width: 1200px) {
   #Events {

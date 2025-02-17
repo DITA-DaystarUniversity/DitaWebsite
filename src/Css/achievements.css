@@ -1,11 +1,4 @@
-#Achievements {
-  /* margin-left: 5%;
-  margin-right: 5%; */
-  margin-top: 100px;
-}
-.Event__page_title {
-  margin-top: 30px;
-}
+
 p,
 h1,
 h2 {
@@ -14,7 +7,7 @@ h2 {
 #Achievements h1 {
   font-size: 50px;
   font-weight: 600;
-  line-height: 89.56px;
+  /* line-height: 89.56px; */
   text-align: left;
   margin: 0px;
   color: rgba(28, 57, 123, 0.66);
@@ -23,11 +16,13 @@ h2 {
   border: 2px solid rgba(29, 49, 94, 0.66);
 }
 .Achievements_content {
-  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .Achievements_content img {
   border-radius: 70px;

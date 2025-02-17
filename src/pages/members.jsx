@@ -75,7 +75,7 @@ function members() {
               </div>
             ) : (Members.map((member, index) => {
               const color = randomColor();
-              consoe.log(member.memberImage)
+              console.log(member.memberImage)
               return (
                 <div
                   className="member"

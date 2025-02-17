@@ -112,7 +112,7 @@ function technicalWriting() {
                       }}
                       key={"Writing" + index} id={`Writing${index}`}
                     >
-                      <img src={`/Images/Writings/WriterImages/${writing.writerImage}`} />
+                      <img src={writing.writerImage} />
                       <h2>{writing.writerName}</h2>
                       <h2 className="topic">{writing.topic}</h2>
                       <p>{writing.blogTeaser}</p>

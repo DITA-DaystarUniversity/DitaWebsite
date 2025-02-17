@@ -19,7 +19,7 @@ function Single_event() {
       <h2 className="event_title">{title}</h2>
       <div className="single_event">
         <div className="single_event_img">
-          <img src={`/Images/Events/${img}`} alt={title} />
+          <img src={img} alt={title} />
           <h2>Event Overview</h2>
           <hr style={{ width: "100%" }} />
           <p>{details}</p>

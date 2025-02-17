@@ -15,6 +15,7 @@ function display_leaders() {
       .then((response) => response.json())
       .then((data) => {
         setLeaders(data);
+        console.log(data)
         setLoading(false);
       })
       .catch((error) => {
@@ -37,7 +38,7 @@ function display_leaders() {
           Leaders.map((leader, index) => {
             return (
               <div className="leader" key={index}>
-                <img src={`/Images/Dita-Leaders/${leader.leaderImage}`} />
+                <img src={leader.leaderImage} />
                 <h2>{leader.leaderName}</h2>
                 <p>{leader.leaderRole}</p>
                 <p>{leader.leaderDescription}</p>

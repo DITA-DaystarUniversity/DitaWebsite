@@ -132,7 +132,7 @@ function projects() {
                       {project.projectName}
                     </h2>
                     <img
-                      src={`/Images/Projects/${project.projectImage}`}
+                      src={project.projectImage}
                       alt={`${project.projectName}`}
                       style={{
                         width: "70%",

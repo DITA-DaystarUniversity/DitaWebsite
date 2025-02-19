@@ -20,11 +20,10 @@ function members() {
 
 
   useEffect(() => {
-    fetch("https://api.dita.co.ke/api/v1/members")
+    fetch("http://api.dita.co.ke/members")
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);
-        console.log(data)
         setLoading(false);
       })
       .catch((error) => {
@@ -65,23 +64,21 @@ function members() {
                   height: '80vh'
                 }}
               >
-                <DotLottieReact
-                  src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
-                  loop
-                  autoplay
-                  style={{ width: "700px", height: "700px" }}
-                />
+               <DotLottieReact
+                    src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                    loop
+                    autoplay
+                    style={{ width: "100%", height: "100%" }}
+                  />
                 <p style={{ fontSize: "30px" }}>No Members to display</p>
               </div>
             ) : (Members.map((member, index) => {
               const color = randomColor();
-              console.log(member.memberImage)
               return (
                 <div
                   className="member"
                   key={index}
                   style={{
-                    width: "450px",
                     minWidth: "300px",
                     height: "450px",
                     display: "flex",

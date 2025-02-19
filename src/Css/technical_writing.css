@@ -37,7 +37,7 @@ a {
 
 .technical {
   width: 43%;
-  min-width: 300px;
+  min-width: 350px;
   /* height: 400px; */
   display: flex;
   flex-direction: column;

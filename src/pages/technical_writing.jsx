@@ -36,14 +36,8 @@ function technicalWriting() {
     });
   }
 
-  async function randomImage() {
-    const width = window.innerWidth;
-    const image = await fetch(`https://random.imagecdn.app/${width}/500`);
-    return image.url;
-  }
-
   function fetchJson() {
-    fetch("https://api.dita.co.ke/api/v1/technicalWritings")
+    fetch("http://api.dita.co.ke/technicalWritings")
       .then((response) => response.json())
       .then((data) => {
         setWriting(data);
@@ -93,11 +87,11 @@ function technicalWriting() {
                     height: '80vh'
                   }}
                 >
-                  <DotLottieReact
+                 <DotLottieReact
                     src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
                     loop
                     autoplay
-                    style={{ width: "700px", height: "700px" }}
+                    style={{ width: "100%", height: "100%" }}
                   />
                   <p style={{ fontSize: "30px" }}>No writings to display</p>
                 </div>

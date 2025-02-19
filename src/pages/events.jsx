@@ -100,11 +100,10 @@ function events() {
 
 
   useEffect(() => {
-    fetch("https://api.dita.co.ke/api/v1/events")
+    fetch("http://api.dita.co.ke/events")
       .then((response) => response.json())
       .then((data) => {
         setEvents(data); // Set the state
-        console.log(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -139,14 +138,23 @@ function events() {
           <hr />
           <div className="Events_display">
             {Events.length === 0 ? (
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                  width: '100%',
+                  height: '80vh'
+                }}
+              >
                 <DotLottieReact
                   src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
                   loop
                   autoplay
-                  style={{ width: '500px', height: '500px' }}
+                  style={{ width: "100%", height: "100%" }}
                 />
-                <p style={{ fontSize: '30px' }}>No events to display</p>
+                <p style={{ fontSize: "30px" }}>No Members to display</p>
               </div>
             ) : (
               Events.map((event, index) => (

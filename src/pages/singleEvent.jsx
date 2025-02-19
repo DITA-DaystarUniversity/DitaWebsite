@@ -14,6 +14,7 @@ function Single_event() {
     Eventlocation,
     registration_details,
   } = location.state || {};
+ 
   return (
     <Layout>
       <h2 className="event_title">{title}</h2>

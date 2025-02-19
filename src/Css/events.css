@@ -22,6 +22,10 @@ h2 {
   flex-wrap: wrap;
   margin-top: 20px;
 }
+::-webkit-scrollbar
+{
+  display: none;
+}
 .Events_display h1 {
   text-align: start;
   width: 88%;
@@ -147,6 +151,11 @@ hr {
   }
   .Events_calender {
     display: none;
+  }
+
+  .lottie
+  {
+    max-width: 200px;
   }
   .event {
     width: 300px;

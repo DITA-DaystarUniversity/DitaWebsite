@@ -5,6 +5,8 @@ import "/src/Css/singleProject.css";
 function single_project() {
   const location = useLocation();
   const { name, img, description, link, github } = location.state || {};
+  const str = img;
+  const match = str.match(/https:\/\/res\.cloudinary\.com\/\S+/);
   return (
     <Layout>
       <h1 className="project_title" style={{}}>

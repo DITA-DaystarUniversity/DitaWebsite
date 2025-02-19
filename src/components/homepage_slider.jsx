@@ -11,11 +11,10 @@ function display_leaders() {
   const [loading, setLoading] = useState(true);
 
   function fetchJson() {
-    fetch("https://api.dita.co.ke/api/v1/ditaleaders")
+    fetch("http://api.dita.co.ke/ditaleaders")
       .then((response) => response.json())
       .then((data) => {
         setLeaders(data);
-        console.log(data)
         setLoading(false);
       })
       .catch((error) => {
@@ -73,7 +72,7 @@ function display_leaders() {
             autoplay
             style={{ width: "300px", height: "300px" }}
           />
-          <p style={{ fontSize: "30px" }}>No Leaders to display</p>
+          <p>No Leaders to display</p>
         </div>
       ))}
     </div>

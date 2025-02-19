@@ -30,9 +30,7 @@ function projects() {
 
   document.addEventListener("click", (event) => {
     const clickedElement = event.target; // or event.currentTarget
-    console.log(clickedElement);
     const parts = String(clickedElement.id).split("Project");
-    console.log(parts);
     const element = parts.length > 1 ? parts[1] : null;
     if (element !== null) {
       showSingleProject(element);
@@ -47,7 +45,7 @@ function projects() {
   }
 
   useEffect(() => {
-    fetch("https://api.dita.co.ke/api/v1/projects")
+    fetch("http://api.dita.co.ke/projects")
 
       .then((response) => response.json())
       .then((data) => {
@@ -93,12 +91,12 @@ function projects() {
                 }}
               >
                 <DotLottieReact
-                  src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
-                  loop
-                  autoplay
-                  style={{ width: "700px", height: "700px" }}
-                />
-                <p style={{ fontSize: "30px" }}>No projects to display</p>
+                    src="https://lottie.host/08238f7a-4b5d-4237-ac9d-bb298c0f2db0/mIwHBP3n1v.lottie"
+                    loop
+                    autoplay
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                <p style={{ fontSize: "30px" , textAlign: 'center' }}>No projects to display</p>
               </div>
             ) : (
               Projects.map((project, index) => {

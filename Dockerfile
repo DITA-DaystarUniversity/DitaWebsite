@@ -11,7 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Step 5: Copy the rest of the application source code
-COPY . .
+COPY . /app/
 
 # Step 6: Create a folder called images with subfolders
 RUN mkdir -p /app/Images/Events \

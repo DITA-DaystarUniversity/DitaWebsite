@@ -16,7 +16,7 @@ function Hackathon() {
   }
 
   useEffect(() => {
-    fetch("http://api.dita.co.ke/hackathons")
+    fetch("https://api.dita.co.ke/hackathons")
       .then((response) => response.json())
       .then((data) => {
         setHackathon(data);

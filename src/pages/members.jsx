@@ -20,7 +20,7 @@ function members() {
 
 
   useEffect(() => {
-    fetch("http://api.dita.co.ke/members")
+    fetch("https://api.dita.co.ke/members")
       .then((response) => response.json())
       .then((data) => {
         setMembers(data);

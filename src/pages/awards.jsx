@@ -16,7 +16,7 @@ function awards() {
   }
 
   useEffect(() => {
-    fetch("http://api.dita.co.ke/awards")
+    fetch("https://api.dita.co.ke/awards")
       .then((response) => response.json())
       .then((data) => {
         setAwards(data);

@@ -45,7 +45,7 @@ function projects() {
   }
 
   useEffect(() => {
-    fetch("http://api.dita.co.ke/projects")
+    fetch("https://api.dita.co.ke/projects")
 
       .then((response) => response.json())
       .then((data) => {

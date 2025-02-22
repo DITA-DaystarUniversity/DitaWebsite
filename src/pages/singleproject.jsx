@@ -7,6 +7,7 @@ function single_project() {
   const { name, img, description, link, github } = location.state || {};
   const str = img;
   const match = str.match(/https:\/\/res\.cloudinary\.com\/\S+/);
+  console.log(github)
   return (
     <Layout>
       <h1 className="project_title" style={{}}>
@@ -17,13 +18,10 @@ function single_project() {
         <div id="project-content">
           <div id="project-description">{description}</div>
           <p id="project-link">
-            <a href={link}>{link}</a>
+            <a href={link} style={{ margin: 0 }}>Download / Access Project</a>
           </p>
           <p id="project-github">
-            <a href={github}>Github</a>
-          </p>
-          <p id="project-github">
-            <a href={github}>View Project</a>
+            <a href={github} style={{ margin: 0 }} >Github</a>
           </p>
         </div>
 

@@ -16,7 +16,7 @@ function projects() {
       const img = Projects[i].projectImage;
       const description = Projects[i].projectDetailedDescription;
       const link = Projects[i].projectLink;
-      const github = Projects[i].projectGithub;
+      const github = Projects[i].projectGithubLink;
       return { name, img, description, link, github };
     }
   }
@@ -118,6 +118,9 @@ function projects() {
                       boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
                       paddingTop: "20px",
                       cursor: "pointer",
+                      border: 'none',
+                      borderRadius: '20px',
+                      paddingBottom: '30px'
                     }}
                   >
                     <h2

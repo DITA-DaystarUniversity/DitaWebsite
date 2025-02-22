@@ -116,7 +116,7 @@ function homePage() {
               <img src={phone_icon}></img>
               <h2>Phone</h2>
               <p>Feel free to give us a call or send us a message</p>
-              <a href="tel:+254 712-345-6789" className="phone">
+              <a href="tel:+254 712-345-6789" className="phone" style={{ margin: 0 }}>
                 +254 712-345-6789
               </a>
             </div>

@@ -87,6 +87,7 @@ function members() {
                     margin: "20px",
                     alignItems: "center",
                     paddingTop: "20px",
+                    borderRadius: "20px",
                   }}
                 >
                   <img

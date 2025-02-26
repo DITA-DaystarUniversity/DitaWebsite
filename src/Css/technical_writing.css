@@ -96,7 +96,7 @@ a {
     margin-top: 20px;
   }
   .technical_writing_content {
-    margin-left: -12px;
+    width: 100%;
   }
   .technical img {
     width: 100px;

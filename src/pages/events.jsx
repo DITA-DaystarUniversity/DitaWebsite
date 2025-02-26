@@ -134,7 +134,7 @@ function events() {
         }} size={50} aria-label="Loading Spinner" />
       ) : (
         <div id="Events">
-          <h1 className="Event__page_title">Events</h1>
+          <h1 className="Event__page_title" style={{marginTop: '20px'}}>Events</h1>
           <hr />
           <div className="Events_display">
             {Events.length === 0 ? (
@@ -154,7 +154,7 @@ function events() {
                   autoplay
                   style={{ width: "100%", height: "100%" }}
                 />
-                <p style={{ fontSize: "30px" }}>No Members to display</p>
+                <p style={{ fontSize: "30px" }}>No Events to display</p>
               </div>
             ) : (
               Events.map((event, index) => (

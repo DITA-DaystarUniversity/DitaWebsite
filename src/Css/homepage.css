@@ -376,6 +376,7 @@ a {
   }
   .home_about_text {
     display: block;
+    margin-left: 20px;
   }
   .home_about {
     display: none;
@@ -402,6 +403,14 @@ a {
   }
   .home_services {
     margin-top: 50px;
+  }
+  .related_links
+  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .home_services h1 {
     font-size: 23px;
@@ -472,6 +481,7 @@ a {
   }
   .home_contact h1 {
     font-size: 40px;
+    text-align: center;
   }
   .contact_details div:last-child {
     margin-top: -30px;
@@ -561,6 +571,7 @@ a {
   }
   .home_meet_team {
     margin-top: 50px;
+    text-align: center;
   }
   .home_meet_team h1 {
     font-size: 27px;

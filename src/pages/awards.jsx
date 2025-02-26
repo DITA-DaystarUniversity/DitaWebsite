@@ -66,7 +66,7 @@ function awards() {
                   autoplay
                   style={{ width: "100%", height: "100%" }}
                 />
-                <p style={{ fontSize: "30px" }}>No Members to display</p>
+                <p style={{ fontSize: "30px" }}>No Awards to display</p>
               </div>
               ) : (Awards.map((awards, index) => {
                 const color = randomColor();

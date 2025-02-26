@@ -132,6 +132,7 @@ hr {
 @media screen and (max-width: 1200px) {
   #Events {
     margin: 0px;
+    width: 100%;
     /* height: 500px; */
   }
   .Events_calender,
@@ -148,6 +149,7 @@ hr {
     scroll-snap-align: center;
     scroll-snap-stop: always;
     align-items: self-start;
+    width: 100%;
   }
   .Events_calender {
     display: none;

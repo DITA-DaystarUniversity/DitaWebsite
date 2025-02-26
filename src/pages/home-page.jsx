@@ -34,7 +34,7 @@ function homePage() {
         </div>
 
         <div className="home_about_phone_view">
-          <div>
+          <div style={{ textAlign: "center" }}>
             <h1>Elevate. Innovate.</h1>
             <h5>Unlocking Potential Through Technology</h5>
           </div>
@@ -171,10 +171,10 @@ function homePage() {
             <div>
               <h2>Contact Us</h2>
               <p>
-                Outlook: <a href="mailto:Dita@daystar.ac.ke">dita@daystar.com</a>
+                Outlook: <a href="mailto:Dita@daystar.ac.ke" style={{marginLeft: '10px'}}>dita@daystar.com</a>
               </p>
               Location:
-              <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]">
+              <a href="https://www.google.com/search?client=firefox-b-d&sca_esv=556283150&tbs=lf:1,lf_ui:2&tbm=lcl&q=daystar+athi+river&rflfq=1&num=10&rldimm=8008581111557565122&ved=2ahUKEwifxOD-hteAAxUraqQEHW5kCtQQu9QIegQIFxAM#rlfi=hd:;si:15838964805034482325,l,ChJkYXlzdGFyIGF0aGkgcml2ZXJI0Nm6AlocEAAYABgBGAIiEmRheXN0YXIgYXRoaSByaXZlcpIBCnVuaXZlcnNpdHmqAUgQASoLIgdkYXlzdGFyKAAyHxABIhs4-oiECcpChLsDMA1gYih2KRfv-BB8X1rDl-0yFhACIhJkYXlzdGFyIGF0aGkgcml2ZXI;mv:[[-1.4351547,37.050985499999996],[-1.4816166,36.972613599999995]]" style={{marginLeft: '10px'}}>
                 Daystar University, ATHI RIVER , KENYA
               </a>
             </div>
@@ -183,13 +183,13 @@ function homePage() {
           <hr className="footer_hr" />
 
           <div className="links">
-            <a href="https://www.linkedin.com/company/dita-daystar-university">
+            <a href="https://www.linkedin.com/company/dita-daystar-university" style={{marginLeft: '10px'}}>
               <img src={linkedin} />
             </a>
-            <a href="https://github.com/dita-daystaruni">
+            <a href="https://github.com/dita-daystaruni" style={{marginLeft: '10px'}}>
               <img src={github} />
             </a>
-            <a href="https://www.instagram.com/dita.daystar/">
+            <a href="https://www.instagram.com/dita.daystar/" style={{marginLeft: '10px'}}>
               <img src={instagram} />
             </a>
           </div>

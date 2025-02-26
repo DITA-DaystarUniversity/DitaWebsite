@@ -50,7 +50,7 @@ function members() {
         />
       ) : (
         <div id="members">
-          <h1 className="Event__page_title">Meet Our Members</h1>
+          <h1 className="Event__page_title" style={{marginTop: '20px'}}>Meet Our Members</h1>
           <hr className=".Achievements_hr" />
           <div className="members_content">
             {Members.length === 0 ? (

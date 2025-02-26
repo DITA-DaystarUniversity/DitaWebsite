@@ -53,4 +53,9 @@ height: 300px;
   margin-right: 100px;
 }
 
+.Event__page_title
+{
+  margin: 0px;
+}
+
 }

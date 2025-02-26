@@ -20,7 +20,7 @@ function other_pages() {
             src={dita_logo}
             width={100}
             className="dita_logo"
-            style={{ marginLeft: "-60px" }}
+            style={{ marginLeft: "-50px" }}
           />
         </Link>
         <button

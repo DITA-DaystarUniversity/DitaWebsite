@@ -76,7 +76,7 @@ function projects() {
       ) : (
         <div id="projects">
           {/* Make a general css for this */}
-          <h1 className="Event__page_title">Explore Our Projects</h1>
+          <h1 className="Event__page_title" style={{marginTop: '20px'}}>Explore Our Projects</h1>
           <hr />
           <div className="projects_content">
             {Projects.length === 0 ? (
